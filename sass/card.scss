@@ -1,0 +1,17 @@
+.card {
+  background: white;
+  border: 1px solid $medium-beige;
+  border-bottom: 2px solid $dark-beige;
+  @include border-radius(3px);
+  margin: 0 auto 1rem auto;
+  padding: 1.5rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  .title {
+    margin: 0;
+    color: #999;
+  }
+}

@@ -1,0 +1,37 @@
+/* Primary button
+  ================================================== */
+
+.button, button, input[type="submit"], input[type="reset"] {
+  background-color: $primary-button;
+  border-color: $primary-button-border;
+  color: #FFFFFF;
+  font-size: 1em;
+
+  &:hover, &:focus {
+    background-color: $primary-button-hover;
+    border-color: $primary-button-border-hover;
+    color: #FFFFFF;
+  }
+}
+
+/* Secondary button
+  ================================================== */
+
+.button, button, input[type="submit"], input[type="reset"] {
+  &.secondary {
+    background-color: $secondary-button;
+    border-color: $secondary-button-border;
+    color: $dark-gray;
+
+    &:hover, &:focus {
+      background-color: $secondary-button-hover;
+      border-color: $secondary-button-border-hover;
+      color: $dark-gray;
+    }
+  }
+}
+
+.gray-link {
+  color: $dark-gray;
+  border-bottom: 1px solid $medium-gray !important;
+}
