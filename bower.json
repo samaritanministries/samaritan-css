@@ -1,0 +1,21 @@
+{
+  "name": "samaritan-css",
+  "version": "0.0.1",
+  "main": [
+    "sass/samaritan.scss",
+    "css/samaritan.css"
+  ],
+
+  "dependencies": {
+    "dashing-css": "0.0.4"
+  },
+
+  "homepage": "http://developers.samaritanministries.org/",
+  "description": "Core style for all Samaritan Apps",
+
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samaritanministries/samaritan-css"
+  }
+}
