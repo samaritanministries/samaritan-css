@@ -1,0 +1,11 @@
+/*! samaritan.css v0.0.1 - goo.gl/eYtizL | MIT License */
+
+// Add component styles
+  @import 'vendor/bower_components/dashing-css/sass/dashing';
+  @import 'vendor/animate';
+
+// Add core style
+  @import 'samaritan/settings';
+  @import 'samaritan/core';
+  @import 'samaritan/buttons';
+  @import 'samaritan/card';
