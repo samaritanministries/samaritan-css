@@ -2,7 +2,7 @@ node_modules
 dist
 test/temp
 .sass-cache
-sass/vendor/bower_components
+app/bower_components
 .tmp
 .DS_Store
 .suo
