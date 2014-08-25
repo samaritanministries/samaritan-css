@@ -1,9 +1,11 @@
-node_modules
-dist
-test/temp
 .sass-cache
-app/bower_components
 .tmp
 .DS_Store
 .suo
 .sln
+app/bower_components
+dist
+sass/vender/*
+sass/samaritan.css
+test/temp
+node_modules
