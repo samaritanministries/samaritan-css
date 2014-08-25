@@ -2,6 +2,7 @@
   ================================================== */
 
 .button, button, input[type="submit"], input[type="reset"] {
+  @include border-radius(50px);
   background-color: $primary-button;
   border-color: $primary-button-border;
   color: #FFFFFF;
