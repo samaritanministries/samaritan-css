@@ -5,7 +5,7 @@
 .sln
 app/bower_components
 dist
-sass/vender/*
+sass/vendor/*
 sass/samaritan.css
 test/temp
 node_modules
