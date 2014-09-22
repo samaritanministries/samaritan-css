@@ -1,103 +1,30 @@
-.modal {
-  margin: 5rem auto 0 auto;
-  z-index: 1050;
-  outline: 0;
-  max-width: 32rem;
-
-  .modal-table {
-    width: 100%;
-    height: 100%;
-    display: table;
-
-    @media #{$tablet} {
-      padding: 3rem 0;
-    }
-  }
-
-  .modal-dialog {
-    max-width: 650px;
-    width: 90%;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .modal-inner {
-    @extend %clearfix;
-    background-clip: padding-box;
-    background-color: #fff;
-    border-radius: 15px;
-    outline: 0;
-    padding: 2rem;
-    max-width: 30rem;
-    margin: 1rem;
-
-    @media #{$tablet} {
-      margin: auto;
-    }
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.7rem;
-
-    &.left {
-      text-align: left;
-    }
-  }
-
-  a.big {
-    font-size: 1.1rem;
-  }
-
-  .button-wrap {
-    @extend %clearfix;
-    margin: 0 auto;
-    max-width: 30rem;
-    padding: 0;
-
-    .button {
-      display: block;
-      width: 100%;
-    }
-
-    .close {
-      display: block;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-  }
-
-  @media #{$tablet} {
-    .button-wrap {
-      .button {
-        width: auto;
-        display: inline-block;
-      }
-
-      .close {
-        display: inline-block;
-        margin-left: 1rem;
-        margin-top: 0;
-      }
-    }
-  }
-}
-
 .overlay {
+  background-color: rgba(31,31,35, 0.85);
+  overflow: scroll;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(31,31,35, 0.85);
+  left: 0;
   z-index: 1000;
   @include animation("fadeIn 200ms");
 }
 
-.popover-overlay {
-  @extend .overlay;
-  background-color: rgba(31,31,35, 0.45);
+.modal {
+  border-radius: 10px;
+  background-color: #F1F2F3;
+  margin: 1.5rem auto 1.5rem auto;
+  max-width: 32rem;
+  outline: 0;
+  padding: 1.5rem;
+  width: 90%;
+  z-index: 1050;
+
+  @media all and (min-width: 640px) {
+    margin: 5rem auto 5rem auto;
+  }
+
+  hr.full {
+    margin: 1.5rem -1.5rem -0.2rem -1.5rem;
+  }
 }
