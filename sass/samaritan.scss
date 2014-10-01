@@ -1,7 +1,7 @@
 /*! samaritan.css v0.0.2 - goo.gl/eYtizL | MIT License */
 
 // Dashing.css integration
-//  @import 'vendor/dashing-css/sass/dashing';
+// @import 'vendor/dashing-css/sass/dashing';
 
 // Add component styles
   @import 'vendor/animate';
@@ -10,6 +10,7 @@
   @import 'samaritan/mixins';
   @import 'samaritan/modal';
   @import 'samaritan/settings';
+  @import 'samaritan/icons';
   @import 'samaritan/core';
   @import 'samaritan/buttons';
   @import 'samaritan/card';
