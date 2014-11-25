@@ -10,11 +10,11 @@
 
   &.error {
     background: #d65052;
-    .flash-icon { background-image: url(../images/icons/error-white.svg); }
+    .flash-icon { background-image: url(../bower_components/images/icons/error-white.svg); }
   }
 
   &.success {
     background: #60bf85;
-    .flash-icon { background-image: url(../images/icons/success-white.svg); }
+    .flash-icon { background-image: url(../bower_components/images/icons/success-white.svg); }
   }
 }
