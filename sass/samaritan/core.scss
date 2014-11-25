@@ -50,26 +50,6 @@ p {
     margin: 0;
     vertical-align: middle;
   }
-
-  .flash-icon {
-    background-image: url(../images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    display: inline-block;
-    height: 50px;
-    vertical-align: middle;
-    width: 50px;
-  }
-
-  &.error {
-    background: #d65052;
-    .flash-icon { background-image: url(../images/icon-error.svg); }
-  }
-
-  &.success {
-    background: #60bf85;
-    .flash-icon { background-image: url(../images/icon-success.svg); }
-  }
 }
 
 .icon-x {
