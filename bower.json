@@ -1,6 +1,6 @@
 {
   "name": "samaritan-css",
-  "version": "0.0.3-beta",
+  "version": "0.0.4-beta",
   "main": "sass/samaritan.scss",
 
   "dependencies": {
