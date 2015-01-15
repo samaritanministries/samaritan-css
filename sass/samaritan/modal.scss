@@ -1,6 +1,9 @@
+// CORE MODAL --------------------------------------------
+
 .overlay {
   background-color: rgba(31,31,35, 0.85);
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: fixed;
   top: 0;
   right: 0;
@@ -11,20 +14,200 @@
 }
 
 .modal {
-  border-radius: 10px;
-  background-color: #F1F2F3;
+  border-radius: 15px;
+  background-color: #FFF;
   margin: 1.5rem auto 1.5rem auto;
   max-width: 32rem;
   outline: 0;
-  padding: 1.5rem;
+  padding: 2rem;
   width: 90%;
   z-index: 1050;
+  cursor: default;
 
-  @media all and (min-width: 640px) {
+  @media #{$tablet} {
     margin: 5rem auto 5rem auto;
   }
 
-  hr.full {
-    margin: 1.5rem -1.5rem -0.2rem -1.5rem;
+  .modal-title {
+    margin: 0;
+  }
+
+  .modal-description {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    color: #666666;
+  }
+
+  .modal-actions {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .modal-close {
+    margin-left: 0.7rem;
+    color: #666666;
+    font-weight: 600;
+  }
+
+  .icon.close {
+    position: relative;
+    margin-right: -1rem;
+    margin-top: -1rem;
+    top: 0.8rem;
+    right: 0.8rem;
+
+    &.large {
+      margin-right: -2rem;
+      margin-top: -2rem;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+
+// GENERAL MODAL STYLES -----------------------------------
+
+.modal {
+  hr { // TODO REFACTOR
+    margin: 1.5rem 0 !important;
+
+    &.full {
+      margin: 1.5rem -1.5rem -0.2rem -1.5rem;
+    }
+  }
+
+  p { // TODO REFACTOR
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    color: #939393;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.intro {
+      color: #373737;
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+
+    &.error {
+      color: #dd4b39;
+      font-size: 1em;
+      margin: 1em 0;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .column { // TODO REFACTOR
+    padding: 0.5rem 0 !important;
+  }
+
+  .close { // TODO REFACTOR
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+    @media #{$tablet} {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+  }
+}
+
+
+// MODAL STYLES -------------------------------------------
+
+.modal-transparent {
+  max-width: $global-content-width;
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+
+  .icon.close.large {
+    margin: 0;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+// MODAL SIZES --------------------------------------------
+
+.modal-small {
+  max-width: 25rem;
+}
+
+.modal-open { // TODO REFACTOR
+  overflow: hidden;
+}
+
+
+// BUTTONS ------------------------------------------------
+
+.modal { // TODO REMOVE THIS CRAP
+  .button {
+    display: block;
+    width: 100%;
+
+    @media #{$tablet} {
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+  .button-wrap {
+    text-align: center;
+    @extend %clearfix;
+    padding: 0;
+
+    &.button-wrap-center {
+      margin: 0 auto;
+      max-width: 19rem;
+    }
+
+    .button,
+    .secondary {
+      display: block;
+      width: 100%;
+    }
+
+    .close {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+
+  @media #{$tablet} {
+    .button-wrap {
+      .button,
+      .secondary,
+      .close {
+        float: left;
+        width: auto;
+      }
+
+      .close {
+        margin-top: .8rem;
+        margin-left: 1rem;
+      }
+
+      .center-button {
+        float: none;
+        margin: 0 auto;
+      }
+    }
   }
 }
