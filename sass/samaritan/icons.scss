@@ -18,3 +18,23 @@
     .flash-icon { background-image: url(../bower_components/samaritan-css/images/success-white.svg); }
   }
 }
+
+.icon-x {
+  background-image: url(../images/icon-x.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+}
+
+.s2s-logo {
+  background-image: url(../images/save-to-share-logo.png);
+  background-repeat: no-repeat;
+  background-size: 250px 113px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 113px;
+  width: 250px;
+}
