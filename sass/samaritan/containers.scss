@@ -1,0 +1,14 @@
+.placeholder-container {
+  margin: 1rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder {
+  display: none;
+  margin: auto;
+
+  @media #{$tablet} {
+    width: 10rem;
+  }
+}

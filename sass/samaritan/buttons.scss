@@ -1,147 +1,70 @@
-/* Setup button style
+
+$buttons: ".button, button, input[type='submit'], input[type='reset']";
+$button-disabled: "&[disabled], &.disabled, &.button-disabled";
+
+/* Core Button Setup
   ================================================== */
 
-.button, button, input[type="submit"], input[type="reset"] {
-  border-radius: 3px;
-  border: 1px solid;
+#{$buttons} {
+  @include border-radius(50px);
+  border: 2px solid;
   cursor: pointer;
-  display: inline-block;
-  font-size: 0.9rem;
-  letter-spacing: 0.04rem;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0;
   outline: none;
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem 1rem;
   text-align: center;
   text-decoration: none;
 
-  &.large { font-size: 1.1rem; }
-  &.block { display: block; }
-}
-
-.button, button, input[type="submit"], input[type="reset"] {
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.8rem 1rem;
-  letter-spacing: 0;
-  display: block;
-
   @media #{$tablet} {
-    padding: 0.5rem 1rem;
-    padding-top: 0.4rem;
     display: inline-block;
     font-size: 1rem;
+    padding: 0.5rem 1rem;
+    padding-top: 0.4rem;
   }
 
-  &[disabled], &.disabled {
-    opacity: 0.4;
+  #{$button-disabled} {
     cursor: default;
+    opacity: 0.4;
   }
 
   &.button-block {
-    display: block;
+    display: block !important;
   }
 
   &.button-large {
-    font-size: 1.23rem;
+    font-size: 1.23rem !important;
   }
 }
 
-/* Primary button
+
+/* Primary and Secondary Buttons (default colors)
   ================================================== */
 
-.button, button, input[type="submit"], input[type="reset"] {
-  @include border-radius(50px);
-  background-color: $primary-button;
-  border-color: $primary-button-border;
-  color: #FFFFFF;
-  font-size: 1em;
+#{$buttons} {
+  @extend .button-green;              // Default button color
 
-  &:hover, &:focus {
-    background-color: $primary-button-hover;
-    border-color: $primary-button-border-hover;
-    color: #FFFFFF;
+  &.primary, &.button-primary {       // TODO phase out ".primary", use ".button-primary" instead
+    @extend .button-green;
+  }
+
+  &.secondary, &.button-secondary {   // TODO phase out ".secondary", use ".button-secondary" instead
+    @extend .button-gray;
   }
 }
 
-/* Secondary button
+
+/* All Button Colors
   ================================================== */
 
-.button, button, input[type="submit"], input[type="reset"] {
-  &.secondary {
-    background-color: $secondary-button;
-    border-color: $secondary-button-border;
-    color: $dark-gray;
-
-    &:hover, &:focus {
-      background-color: $secondary-button-hover;
-      border-color: $secondary-button-border-hover;
-      color: $dark-gray;
-    }
-  }
-}
-
-.gray-link {
-  color: $dark-gray;
-  border-bottom: 1px solid $medium-gray !important;
-}
-
-.button.secondary {
-  background-color: #d9d9d9;
-  border-color: #d9d9d9;
-  color: #4A4A4A;
-  font-weight: 600;
-}
-
-button, .button {
-  font-weight: 600;
-  padding: 0.8rem 1rem;
-  letter-spacing: 0;
-  font-size: 1.1rem;
-  background-color: #42b275;
-  border-color: #42b275;
-  display: block;
-
-  @media #{$tablet} {
-    padding: 0.5rem 1rem;
-    padding-top: 0.4rem;
-    display: inline-block;
-    font-size: 1rem;
+#{$buttons} {
+  .button-green {
+    @include button($background-color: $green, $border-color: $green, $type-color: $white);
   }
 
-  &:hover, &:focus {
-    background-color: lighten(#42b275, 10%);
-    border-color: lighten(#42b275, 10%);
-  }
-
-  &[disabled], &.disabled {
-    opacity: 0.4;
-    cursor: default;
-
-    &:hover, &:focus {
-      background-color: #42b275;
-      border-color: #42b275;
-    }
-  }
-
-  &.button-block {
-    display: block;
-  }
-
-  &.button-large {
-    font-size: 1.23rem;
-  }
-}
-
-.placeholder-container {
-  margin: 1rem auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.placeholder {
-  display: none;
-  margin: auto;
-
-  @media #{$tablet} {
-    width: 10rem;
+  .button-gray {
+    @include button($background-color: $gray, $border-color: $gray, $type-color: $gray-dark);
   }
 }

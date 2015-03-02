@@ -1,59 +1,39 @@
-// Dashing.css configuration options
-
-/* Type Size
+/* Type Configuration
   ================================================== */
 
-  $xlarge:  1.953rem;
-  $large:   1.563rem;
-  $medium:  1.25rem;
-  $body:    1rem;
-  $small:   0.8rem;
+  $xlarge-font:   1.953rem;
+  $large-font:    1.563rem;
+  $medium-font:   1.25rem;
+  $body-font:     1rem;
+  $small-font:    0.8rem;
 
-/* Colors
+  $header-font:   "Source Sans Pro", sans-serif;
+  $body-font:     "Source Sans Pro", sans-serif;
+
+
+/* Color Palette
   ================================================== */
 
-  $black:         #000;
-  $white:         #fff;
-
-  $charcoal:      #373737;
-  $light-gray:    #737373;
-  $gray:          #F3F3F3;
-  $medium-gray:   #B9B9B9;
-  $dark-gray:     #919191;
-
-  $beige:         #E7E7DB;
-  $medium-beige:  #D7D7C8;
-  $dark-beige:    #CCCDB8;
-  $green:         #60BF85;
-  $light-green:   #A0D5BA;
-  $blue:          #2B4051;
-  $light-blue:    #899FBC;
-  $red:           #dd4b39;
-  $purple:        #754c82;
-
-  $border-color:  #555555;
-  $body-color:    #373737;
-
-  $primary-color: $purple;
-
-// Primary button color
-  $primary-button:                $primary-color;
-  $primary-button-border:         $primary-color;
-  $primary-button-hover:          lighten($primary-color, 10%);
-  $primary-button-border-hover:   lighten($primary-color, 10%);
-
-// Secondary button color
-  $secondary-button:              #f6f6f7;
-  $secondary-button-border:       darken($gray, 10%);
-  $secondary-button-hover:        darken($gray, 10%);
-  $secondary-button-border-hover: darken($gray, 10%);
+  $black:         #000000;
+  $blue:          #6A8DD3;
+  $gray-dark:     #373737;
+  $gray-light:    #DDDDDD;
+  $gray:          #8E8E8E;
+  $green:         #6ECC7A;
+  $orange:        #DEA34E;
+  $purple:        #754C82;
+  $red:           #DD4B39;
+  $white:         #FFFFFF;
+  $yello:         #F2E670;
 
 
-/* Fonts
+/* Color Usage
   ================================================== */
 
-  $header-font: "Source Sans Pro", sans-serif;
-  $body-font: "Source Sans Pro", sans-serif;
+  $primary-color: $green;
+
+  $border-color:  $gray-light;
+  $body-color:    $gray-dark;
 
 
 /* Grid
@@ -63,12 +43,3 @@
 
   $tablet: "all and (min-width: 40em)" !default;
   $desktop: "all and (min-width: 64em)" !default;
-
-
-/* Misc.
-  ================================================== */
-
-  $phone: "all and (max-width: 500px)" !default;
-  $border-color:  #ddd;
-  $body-gray:     #606060;
-  $blue:          #4684a6;

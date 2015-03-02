@@ -5,3 +5,15 @@
   -o-animation: $attributes;
   animation: $attributes;
 }
+
+@mixin button($background-color, $border-color, $type-color) {
+  background-color: $background-color;
+  border-color: $border-color;
+  color: $type-color;
+
+  &:hover, &:focus {
+    background-color: lighten($background-color, 10%);
+    border-color: lighten($border-color, 10%);
+    color: $type-color;
+  }
+}

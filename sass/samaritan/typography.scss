@@ -34,10 +34,10 @@ h1.special {
   small { text-transform: none; }
 }
 
-h1 { font-size: $xlarge }
-h2 { font-size: $large; }
-h3 { font-size: $medium; }
-h4 { font-size: $body; }
+h1 { font-size: $xlarge-font }
+h2 { font-size: $large-font; }
+h3 { font-size: $medium-font; }
+h4 { font-size: $body-font; }
 
 
 /* Links
@@ -71,7 +71,7 @@ p { line-height: 1.7rem; }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $charcoal;
+  color: $gray-dark;
   font-family: $header-font;
   small {
     font-family: $body-font;
