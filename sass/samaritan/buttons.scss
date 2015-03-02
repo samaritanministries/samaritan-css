@@ -1,3 +1,50 @@
+/* Setup button style
+  ================================================== */
+
+.button, button, input[type="submit"], input[type="reset"] {
+  border-radius: 3px;
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.04rem;
+  outline: none;
+  padding: 0.8rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+
+  &.large { font-size: 1.1rem; }
+  &.block { display: block; }
+}
+
+.button, button, input[type="submit"], input[type="reset"] {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  letter-spacing: 0;
+  display: block;
+
+  @media #{$tablet} {
+    padding: 0.5rem 1rem;
+    padding-top: 0.4rem;
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  &[disabled], &.disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  &.button-block {
+    display: block;
+  }
+
+  &.button-large {
+    font-size: 1.23rem;
+  }
+}
+
 /* Primary button
   ================================================== */
 
@@ -36,3 +83,12 @@
   color: $dark-gray;
   border-bottom: 1px solid $medium-gray !important;
 }
+
+
+.button.secondary {
+  background-color: #d9d9d9;
+  border-color: #d9d9d9;
+  color: #4A4A4A;
+  font-weight: 600;
+}
+

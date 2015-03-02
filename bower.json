@@ -1,11 +1,7 @@
 {
   "name": "samaritan-css",
-  "version": "0.0.4-beta",
+  "version": "1.0",
   "main": "sass/samaritan.scss",
-
-  "dependencies": {
-    "dashing-css": "0.0.4"
-  },
 
   "homepage": "http://developers.samaritanministries.org/",
   "description": "Core style for all Samaritan Apps",

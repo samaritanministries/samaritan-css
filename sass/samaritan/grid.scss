@@ -1,0 +1,79 @@
+/* Reset all box styles
+  ================================================== */
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Mobile grid (default)
+  ================================================== */
+
+html { font-size: 100%; }
+
+.row {
+  @extend %clearfix;
+  margin: auto;
+  width: 100%;
+  max-width: $global-content-width;
+}
+
+.column {
+  @extend %clearfix;
+  padding: 1rem;
+
+  /* Removes extra padding when nesting columns */
+  &.group { padding: 0; }
+
+  &.full,
+  &.two-thirds,
+  &.three-fourths,
+  &.half,
+  &.third,
+  &.fourth,
+  &.sixths,
+  &.eighths {
+    width: 100%;
+  }
+}
+
+/* Tablet grid
+  ================================================== */
+
+@media #{$tablet} {
+  html { font-size: 105%; }
+
+  .column {
+    float: left;
+
+    &.full {
+      float: none;
+      width: 100%;
+    }
+
+    &.two-thirds { width: 66.666%; }
+    &.three-fourths { width: 75%; }
+    &.half { width: 50%; }
+    &.third { width: 33.333%; }
+    &.fourth { width: 25%; }
+    &.sixths { width: 16.666%; }
+    &.eighths { width: 12.5%; }
+
+    &.flow-opposite { float: right;}
+
+    &.center {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Desktop grid
+  ================================================== */
+
+@media #{$desktop} {
+  html { font-size: 110%; }
+}

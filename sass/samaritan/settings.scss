@@ -1,14 +1,25 @@
+// Dashing.css configuration options
+
+/* Type Size
+  ================================================== */
+
+  $xlarge:  1.953rem;
+  $large:   1.563rem;
+  $medium:  1.25rem;
+  $body:    1rem;
+  $small:   0.8rem;
+
 /* Colors
   ================================================== */
 
   $black:         #000;
-  $white:         #FFFFFF;
+  $white:         #fff;
+
   $charcoal:      #373737;
   $light-gray:    #737373;
   $gray:          #F3F3F3;
   $medium-gray:   #B9B9B9;
   $dark-gray:     #919191;
-
 
   $beige:         #E7E7DB;
   $medium-beige:  #D7D7C8;
@@ -39,8 +50,25 @@
 
 
 /* Fonts
-================================================== */
+  ================================================== */
 
-  $header-font:   "Source Sans Pro", sans-serif;
-  $body-font:     "Source Sans Pro", sans-serif;
+  $header-font: "source-sans-pro", sans-serif;
+  $body-font: "source-sans-pro", sans-serif;
 
+
+/* Grid
+  ================================================== */
+
+  $global-content-width: 1000px;
+
+  $tablet: "all and (min-width: 40em)" !default;
+  $desktop: "all and (min-width: 64em)" !default;
+
+
+/* Misc.
+  ================================================== */
+
+  $phone: "all and (max-width: 500px)" !default;
+  $border-color:  #ddd;
+  $body-gray:     #606060;
+  $blue:          #4684a6;
