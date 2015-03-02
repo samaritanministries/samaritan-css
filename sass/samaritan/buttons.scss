@@ -60,11 +60,11 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 #{$buttons} {
-  .button-green {
+  &.button-green {
     @include button($background-color: $green, $border-color: $green, $type-color: $white);
   }
 
-  .button-gray {
+  &.button-gray {
     @include button($background-color: $gray, $border-color: $gray, $type-color: $gray-dark);
   }
 }

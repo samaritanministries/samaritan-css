@@ -8,3 +8,4 @@ dist
 sass/samaritan.css
 test/temp
 node_modules
+test.css
