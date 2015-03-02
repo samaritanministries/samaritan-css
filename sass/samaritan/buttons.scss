@@ -84,7 +84,6 @@
   border-bottom: 1px solid $medium-gray !important;
 }
 
-
 .button.secondary {
   background-color: #d9d9d9;
   border-color: #d9d9d9;
@@ -92,3 +91,57 @@
   font-weight: 600;
 }
 
+button, .button {
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  letter-spacing: 0;
+  font-size: 1.1rem;
+  background-color: #42b275;
+  border-color: #42b275;
+  display: block;
+
+  @media #{$tablet} {
+    padding: 0.5rem 1rem;
+    padding-top: 0.4rem;
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  &:hover, &:focus {
+    background-color: lighten(#42b275, 10%);
+    border-color: lighten(#42b275, 10%);
+  }
+
+  &[disabled], &.disabled {
+    opacity: 0.4;
+    cursor: default;
+
+    &:hover, &:focus {
+      background-color: #42b275;
+      border-color: #42b275;
+    }
+  }
+
+  &.button-block {
+    display: block;
+  }
+
+  &.button-large {
+    font-size: 1.23rem;
+  }
+}
+
+.placeholder-container {
+  margin: 1rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder {
+  display: none;
+  margin: auto;
+
+  @media #{$tablet} {
+    width: 10rem;
+  }
+}

@@ -1,0 +1,88 @@
+/* Labels
+ ============================================ */
+
+label {
+  color: #747475;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+
+  &.inline {
+    display: inline-block;
+  }
+
+  &.error {
+    color: #dd4b39 !important;
+  }
+}
+
+
+/* Inputs
+ ============================================ */
+
+input[type="text"],
+textarea,
+input[type="email"]  {
+  background: $white;
+  border: 2px solid #E4E4EA;
+  border-radius: 5px;
+  padding: 0.6rem;
+  max-width: 100%;
+  width: 100%;
+  font-size: 1rem;
+
+  &:focus {
+    background: $white;
+    border: 2px solid #6a8dd3;
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+  &.error {
+    border-color: #dd4b39 !important;
+  }
+}
+
+select {
+  width: 100%;
+}
+
+.checkbox-group {
+  ol, ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 1.3rem;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1rem !important;
+    font-weight: normal;
+    color: #343434;
+
+
+    &.inline {
+      margin-right: 0.9rem;
+      margin-left: 0.2rem;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+input.verification-code {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+input[disabled], select[disabled], textarea[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
