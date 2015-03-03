@@ -12,8 +12,13 @@
   color: $type-color;
 
   &:hover, &:focus {
-    background-color: #{$on-hover}($background-color, 10%);
-    border-color: #{$on-hover}($border-color, 10%);
+    @if $on-hover == 'darken' {
+      background-color: darken($background-color, 10%);
+      border-color: darken($border-color, 10%);
+    } @else {
+      background-color: lighten($background-color, 10%);
+      border-color: lighten($border-color, 10%);
+    }
     color: $type-color;
   }
 }
