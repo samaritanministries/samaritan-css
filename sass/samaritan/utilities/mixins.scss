@@ -26,6 +26,15 @@
   }
 }
 
+@mixin header-color($color) {
+  color: $color;
+
+  small {
+    font-size: 90%;
+    color: lighten($color, 10%);
+  }
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
