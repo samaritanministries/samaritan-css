@@ -44,14 +44,14 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 #{$buttons} {
-  @extend .button-green;              // Default button color
+  @extend .button.button-green;              // Default button color
 
   &.primary, &.button-primary {       // TODO phase out ".primary", use ".button-primary" instead
-    @extend .button-green;
+    @extend .button.button-green;
   }
 
   &.secondary, &.button-secondary {   // TODO phase out ".secondary", use ".button-secondary" instead
-    @extend .button-gray;
+    @extend .button.button-gray;
   }
 }
 
@@ -62,6 +62,22 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 #{$buttons} {
   &.button-green {
     @include button($background-color: $green, $border-color: $green, $type-color: $white);
+  }
+
+  &.button-blue {
+    @include button($background-color: $blue, $border-color: $blue, $type-color: $white);
+  }
+
+  &.button-orange {
+    @include button($background-color: $orange, $border-color: $orange, $type-color: $white);
+  }
+
+  &.button-purple {
+    @include button($background-color: $purple, $border-color: $purple, $type-color: $white);
+  }
+
+  &.button-red {
+    @include button($background-color: $red, $border-color: $red, $type-color: $white);
   }
 
   &.button-gray {
