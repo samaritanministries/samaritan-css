@@ -6,14 +6,14 @@
   animation: $attributes;
 }
 
-@mixin button($background-color, $border-color, $type-color) {
+@mixin button($background-color, $border-color, $type-color, $on-hover: 'lighten') {
   background-color: $background-color;
   border-color: $border-color;
   color: $type-color;
 
   &:hover, &:focus {
-    background-color: lighten($background-color, 10%);
-    border-color: lighten($border-color, 10%);
+    background-color: #{$on-hover}($background-color, 10%);
+    border-color: #{$on-hover}($border-color, 10%);
     color: $type-color;
   }
 }

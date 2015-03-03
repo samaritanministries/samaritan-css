@@ -94,6 +94,6 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   }
 
   &.button-gray {
-    @include button($background-color: $gray-light, $border-color: $gray-light, $type-color: $gray-dark);
+    @include button($background-color: $gray-light, $border-color: $gray-light, $type-color: $gray-dark, $on-hover: 'darken');
   }
 }
