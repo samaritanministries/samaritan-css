@@ -46,15 +46,25 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 
 #{$buttons} {
   @extend .button.button-green;
-  @extend .button.button-green:hover;
-  @extend .button.button-green:focus;
+
+  &:hover, &:focus {
+    @extend .button.button-green:hover;
+  }
 
   &.primary, &.button-primary { // TODO phase out ".primary", use ".button-primary" instead
-    @include button($background-color: $green, $border-color: $green, $type-color: $white);
+    @extend .button.button-green;
+
+    &:hover, &:focus {
+      @extend .button.button-green:hover;
+    }
   }
 
   &.secondary, &.button-secondary { // TODO phase out ".secondary", use ".button-secondary" instead
-    @include button($background-color: $gray, $border-color: $gray, $type-color: $gray-dark);
+    @extend .button.button-gray;
+
+    &:hover, &:focus {
+      @extend .button.button-gray:hover;
+    }
   }
 }
 
