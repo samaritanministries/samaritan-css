@@ -45,7 +45,9 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 #{$buttons} {
-  @include button($background-color: $green, $border-color: $green, $type-color: $white);
+  @extend .button.button-green;
+  @extend .button.button-green:hover;
+  @extend .button.button-green:focus;
 
   &.primary, &.button-primary { // TODO phase out ".primary", use ".button-primary" instead
     @include button($background-color: $green, $border-color: $green, $type-color: $white);
@@ -82,6 +84,6 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   }
 
   &.button-gray {
-    @include button($background-color: $gray, $border-color: $gray, $type-color: $gray-dark);
+    @include button($background-color: $gray-light, $border-color: $gray-light, $type-color: $gray-dark);
   }
 }
