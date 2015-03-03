@@ -1,3 +1,6 @@
+/* Mixins
+  ================================================== */
+
 @mixin animation($attributes) {
   -webkit-animation: $attributes;
   -moz-animation: $attributes;
@@ -22,3 +25,51 @@
     color: $type-color;
   }
 }
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin transition($value) {
+  -moz-transition: $value;
+  -o-transition: $value;
+  -webkit-transition: $value;
+  transition: $value;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  -o-user-select: $value;
+  user-select: $value;
+}
+
+
+/* Extendables
+  ================================================== */
+
+%clearfix:before,
+%clearfix:after {
+  content: " ";
+  display: table;
+}
+
+%clearfix:after {
+  clear: both;
+}
+
+%clearfix {
+  *zoom: 1;
+}
+

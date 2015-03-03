@@ -1,15 +1,14 @@
 /*! Samaritan.css v1 - goo.gl/eYtizL | MIT License */
 
 // Add utilities
-  @import 'samaritan/utilities';
   @import 'samaritan/mixins';
+  @import 'samaritan/utilities';
   @import 'samaritan/colors';
   @import 'samaritan/settings';
   @import 'samaritan/grid';
 
 // Add vendor styles
   @import 'vendor/normalize';
-  @import 'vendor/animate';
   @import 'vendor/select2';
 
 // Add core style
