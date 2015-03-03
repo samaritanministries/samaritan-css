@@ -7,6 +7,7 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 
 #{$buttons} {
   @include border-radius(50px);
+  @include user-select(none);
   border: 2px solid;
   cursor: pointer;
   display: block;
@@ -44,14 +45,14 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 #{$buttons} {
-  @extend .button.button-green;              // Default button color
+  @include button($background-color: $green, $border-color: $green, $type-color: $white);
 
-  &.primary, &.button-primary {       // TODO phase out ".primary", use ".button-primary" instead
-    @extend .button.button-green;
+  &.primary, &.button-primary { // TODO phase out ".primary", use ".button-primary" instead
+    @include button($background-color: $green, $border-color: $green, $type-color: $white);
   }
 
-  &.secondary, &.button-secondary {   // TODO phase out ".secondary", use ".button-secondary" instead
-    @extend .button.button-gray;
+  &.secondary, &.button-secondary { // TODO phase out ".secondary", use ".button-secondary" instead
+    @include button($background-color: $gray, $border-color: $gray, $type-color: $gray-dark);
   }
 }
 
