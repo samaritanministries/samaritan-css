@@ -1,22 +1,26 @@
 /*! Samaritan.css v1 - goo.gl/eYtizL | MIT License */
 
-// Add utilities
-  @import 'samaritan/mixins';
-  @import 'samaritan/utilities';
-  @import 'samaritan/colors';
-  @import 'samaritan/settings';
-  @import 'samaritan/grid';
-
-// Add vendor styles
+// Import Core Libraries
   @import 'vendor/normalize';
-  @import 'vendor/select2';
+  @import 'samaritan/settings';
 
-// Add core style
-  @import 'samaritan/modal';
-  @import 'samaritan/icons';
-  @import 'samaritan/buttons';
-  @import 'samaritan/containers';
-  @import 'samaritan/card';
-  @import 'samaritan/flash';
-  @import 'samaritan/typography';
-  @import 'samaritan/form';
+// Import Utilities
+  @import 'samaritan/utilities/mixins';
+  @import 'samaritan/utilities/utilities';
+
+// Import Asthetic Components
+  @import 'samaritan/asthetics/colors';
+  @import 'samaritan/asthetics/icons';
+  @import 'samaritan/asthetics/typography';
+
+// Import Containers
+  @import 'samaritan/containers/grid';
+  @import 'samaritan/containers/modal';
+  @import 'samaritan/containers/containers';
+  @import 'samaritan/containers/card';
+  @import 'samaritan/containers/flash';
+
+// Import Controls
+  @import 'samaritan/controls/buttons';
+  @import 'samaritan/controls/form';
+  @import 'vendor/select2';
