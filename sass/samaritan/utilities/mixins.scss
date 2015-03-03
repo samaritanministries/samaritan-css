@@ -30,6 +30,7 @@
   color: $color;
 
   small {
+    margin-top: 0.4rem;
     font-size: 90%;
     color: lighten($color, 10%);
   }
