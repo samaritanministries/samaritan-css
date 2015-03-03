@@ -1,32 +1,18 @@
-.card, .box {
+// TODO Completely refactor this component!
+
+.card {
+  @include user-select(none);
   @include border-radius(10px);
-  background: white;
-  margin: 0 auto 1.5rem auto;
+  background-color: $white;
+  border: 2px solid $gray-light;
+  margin: 1.5rem auto;
   padding: 0.5rem;
-  border: 2px solid #E7E6D9;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-
-  p {
-    margin: 0;
-  }
-}
-
-.card.placeholder, .box.placeholder {
-  background: rgba(255,255,255,0.45);
-  border: none;
-  border-bottom: 2px solid $border-color;
-  padding: 3rem 1rem;
-  text-align: center;
-
-  h4 {
-    color: rgba(0,0,0,0.65);
-  }
-
-  p {
-    color: rgba(0,0,0,0.3);
-    line-height: 0.5rem !important;
+  &.placeholder {
+    background: rgba(255,255,255,0.45);
+    border: none;
+    border-bottom: 2px solid $border-color;
+    padding: 3rem 1rem;
+    text-align: center;
   }
 }

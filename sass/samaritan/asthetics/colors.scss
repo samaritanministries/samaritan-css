@@ -3,27 +3,17 @@
 
   $black:         #000000;
   $blue:          #6A8DD3;
+
   $gray-dark:     #373737;
-  $gray-light:    #D9D9D9;
   $gray:          #8E8E8E;
+  $gray-light:    #D9D9D9;
+
   $green:         #54bd82;
   $orange:        #DEA34E;
   $purple:        #754C82;
   $red:           #DD4B39;
   $white:         #FFFFFF;
   $yellow:        #F2E670;
-
-  $blue-0:        $blue;
-  $blue-1:        lighten($blue, 10%);
-  $blue-2:        lighten($blue, 20%);
-  $blue-3:        lighten($blue, 30%);
-  $blue-4:        lighten($blue, 40%);
-  $blue-5:        lighten($blue, 50%);
-  $blue-6:        lighten($blue, 60%);
-  $blue-7:        lighten($blue, 70%);
-  $blue-8:        lighten($blue, 80%);
-  $blue-9:        lighten($blue, 90%);
-
 
 /* Color Usage
   ================================================== */
