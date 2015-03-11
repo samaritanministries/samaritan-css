@@ -1,12 +1,10 @@
 // TODO Completely refactor this component!
 
 .card {
-  @include user-select(none);
   @include border-radius(10px);
   background-color: $white;
   border: 2px solid $gray-light;
   margin: 1.5rem auto;
-  padding: 0.5rem;
 
   &.placeholder {
     background: rgba(255,255,255,0.45);
