@@ -33,6 +33,7 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 
   &.button-block {
     display: block !important;
+    width: 100%;
   }
 
   &.button-large {
