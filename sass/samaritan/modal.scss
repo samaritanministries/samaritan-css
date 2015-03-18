@@ -126,12 +126,15 @@
 
 
 // MODAL STYLES -------------------------------------------
-
 .modal-transparent {
   max-width: $global-content-width;
   width: auto;
   padding: 0;
   background-color: transparent;
+
+  .column {
+    padding: 0.5rem 1rem !important;
+  }
 
   .icon.close.large {
     margin: 0;
@@ -142,7 +145,6 @@
 
 
 // MODAL SIZES --------------------------------------------
-
 .modal-small {
   max-width: 25rem;
 }
