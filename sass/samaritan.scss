@@ -5,23 +5,23 @@
   @import 'samaritan/settings';
 
 // Import Utilities
-  @import 'samaritan/utilities/mixins';
-  @import 'samaritan/utilities/utilities';
+  @import 'samaritan/mixins';
+  @import 'samaritan/utilities';
 
 // Import Asthetic Components
-  @import 'samaritan/asthetics/colors';
-  @import 'samaritan/asthetics/icons';
-  @import 'samaritan/asthetics/typography';
-  @import 'samaritan/asthetics/animation';
+  @import 'samaritan/colors';
+  @import 'samaritan/icons';
+  @import 'samaritan/typography';
+  @import 'samaritan/animation';
 
 // Import Containers
-  @import 'samaritan/containers/grid';
-  @import 'samaritan/containers/modal';
-  @import 'samaritan/containers/containers';
-  @import 'samaritan/containers/card';
-  @import 'samaritan/containers/flash';
+  @import 'samaritan/grid';
+  @import 'samaritan/modal';
+  @import 'samaritan/containers';
+  @import 'samaritan/card';
+  @import 'samaritan/flash';
 
 // Import Controls
-  @import 'samaritan/controls/buttons';
-  @import 'samaritan/controls/form';
+  @import 'samaritan/buttons';
+  @import 'samaritan/form';
   @import 'vendor/select2';
