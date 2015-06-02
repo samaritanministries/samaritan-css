@@ -1,20 +1,13 @@
-/* Type Configuration
-  ================================================== */
-
-  $xlarge-size:   1.953rem;
-  $large-size:    1.563rem;
-  $medium-size:   1.25rem;
-  $body-size:     1rem;
-  $small-size:    0.8rem;
-
-  $header-font:   "Source Sans Pro", sans-serif;
-  $body-font:     "Source Sans Pro", sans-serif;
-
-
 /* Grid
   ================================================== */
 
-  $global-content-width: 1000px;
+$global-content-width: 1000px;
 
-  $tablet: "all and (min-width: 40em)" !default;
-  $desktop: "all and (min-width: 64em)" !default;
+$tablet: "all and (min-width: 40em)" !default;
+$desktop: "all and (min-width: 64em)" !default;
+
+
+/* Other
+  ================================================== */
+
+html { background-color: #434449; }

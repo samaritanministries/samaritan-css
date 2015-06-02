@@ -1,6 +1,6 @@
 // ----- Card styles ----- //
 .card {
-  @import border-radius(10px);
+  @include border-radius(10px);
   background-color: $card;
   border: 2px solid $input-border;
   padding: 0.8rem;

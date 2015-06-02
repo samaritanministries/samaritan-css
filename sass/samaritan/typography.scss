@@ -1,33 +1,42 @@
+/* Type Configuration
+  ================================================== */
+
+$xlarge-size:   1.953rem;
+$large-size:    1.563rem;
+$medium-size:   1.25rem;
+$body-size:     1rem;
+$small-size:    0.8rem;
+
+$header-font:   "Source Sans Pro", sans-serif;
+$body-font:     "Source Sans Pro", sans-serif;
+
 * {
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
+  background-color: $gray-1;
   font-family: $body-font;
   font-size: 18px;
-  background-color: #f5f5f5;
 }
+
 
 /* Headers
   ================================================== */
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: $gray-dark;
+  color: $gray-10;
   font-family: $header-font;
+  font-weight: 600;
+  margin-bottom: 0.25rem; // TODO Evaluate this margin
 
-  small {
-    font-family: $body-font;
+  small { // TODO Kill this little guy
     display: block;
+    font-family: $body-font;
     font-size: 60%;
     font-weight: normal;
     line-height: 1.5rem;
-  }
-
-  &.green {
-    @include header-color($color: $green);
   }
 }
 
@@ -46,7 +55,7 @@ a {
   color: $blue;
 
   &:hover, &:focus {
-    color: lighten($blue, 10%);
+    color: $blue-1;
   }
 }
 
@@ -56,5 +65,5 @@ a {
 
 p {
   color: $body-color;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }

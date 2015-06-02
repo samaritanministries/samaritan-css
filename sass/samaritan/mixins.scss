@@ -26,16 +26,6 @@
   }
 }
 
-@mixin header-color($color) {
-  color: $color;
-
-  small {
-    margin-top: 0.4rem;
-    font-size: 90%;
-    color: lighten($color, 10%);
-  }
-}
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -50,11 +40,20 @@
   box-shadow: $value;
 }
 
+@mixin transform($value) {
+  transform: $value;
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+}
+
 @mixin transition($value) {
+  transition: $value;
+  -webkit-transition: $value;
   -moz-transition: $value;
   -o-transition: $value;
-  -webkit-transition: $value;
-  transition: $value;
+  -ms-transition: $value;
 }
 
 @mixin user-select($value) {
@@ -65,6 +64,30 @@
   user-select: $value;
 }
 
+@mixin hide-on($device, $display) {
+  display: none;
+
+  @if $device == 'phone' {
+    @media #{$tablet} {
+      display: $display;
+    }
+  } @else if $device == 'tablet' {
+    @media #{$desktop} {
+      display: $display;
+    }
+  }
+}
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex($item) {
+  -webkit-flex: $item;
+  -moz-box-flex: $item;
+  flex: $item;
+}
 
 /* Extendables
   ================================================== */
