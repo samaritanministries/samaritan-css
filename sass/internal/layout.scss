@@ -1,3 +1,15 @@
+// ----- Grid ----- //
+  $global-content-width: 1000px;
+
+  //Tablet (640px)
+  $tablet: "all and (min-width: 40rem)" !default;
+
+  //Desktop (1024px)
+  $desktop: "all and (min-width: 64rem)" !default;
+
+  //Large-desktop (1536px)
+  $large-desktop: "all and (min-width: 96rem)" !default;
+  
 // Container styles
 .app-container {
   @extend %clearfix;

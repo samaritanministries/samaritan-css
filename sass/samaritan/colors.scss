@@ -1,24 +1,42 @@
 /* Color Palette
   ================================================== */
 
-  $black:         #000000;
-  $blue:          #6A8DD3;
-
-  $gray-dark:     #373737;
-  $gray:          #8E8E8E;
-  $gray-light:    #D9D9D9;
-
-  $green:         #54bd82;
-  $orange:        #DEA34E;
-  $purple:        #754C82;
-  $red:           #DD4B39;
   $white:         #FFFFFF;
-  $yellow:        #F2E670;
+  $black:         #000000;
 
-/* Color Usage
+  $gray-1:        #D9D9D9;
+  $gray-5:        #8E8E8E;
+  $gray-10:       #373737;
+  $gray:          $gray-5;
+
+  $blue-5:        #6A8DD3;
+  $blue:          $blue-5;
+
+  $green-5:       #53BC81;
+  $green:         $green-5;
+
+  $orange-1:      #E1A856;
+  $orange-5:      #DD9331;
+  $orange-10:     #CC7D29;
+  $orange:        $orange-5;
+
+  $purple-5:      #754C82;
+  $purple:        $purple-5;
+
+  $red-5:         #DD4B39;
+  $red:           $red-5;
+
+  $yellow-5:      #F2E670;
+  $yellow:        $yellow-5;
+
+  $gray-light:    $gray-1;
+  $gray-dark:     $gray-10;
+
+
+/* Color Aliases
   ================================================== */
 
   $primary-color: $green;
 
-  $border-color:  $gray-light;
-  $body-color:    $gray-dark;
+  $border-color:  $gray-1;
+  $body-color:    $gray-10;

@@ -12,7 +12,7 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   cursor: pointer;
   display: block;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0;
   outline: none;
   padding: 0.8rem 1rem;
@@ -30,6 +30,7 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   #{$button-disabled} {
     cursor: default;
     opacity: 0.4;
+    pointer-events: none;
   }
 
   &.button-block {
