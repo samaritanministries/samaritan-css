@@ -1,0 +1,29 @@
+// Internal typography styles //
+
+body {
+  font-family: $body-font;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $gray;
+  font-family: $header-font;
+  small {
+    font-family: $body-font;
+  }
+}
+
+p {
+  color: $body-color;
+  line-height: 1.25em;
+}
+
+//Typographic styles within cards & modals
+.card, .modal {
+  h3 {
+    color: #545C61;
+    margin: 0 0 0 -0.4rem;
+  }
+}

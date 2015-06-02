@@ -1,0 +1,24 @@
+// ----- Card styles ----- //
+.card {
+  @import border-radius(10px);
+  background-color: $card;
+  border: 2px solid $input-border;
+  padding: 0.8rem;
+
+  // Light card
+  &.light {
+    background-color: #F1F1F1;
+    border: 1px solid #C6C9CC;
+    // Text inputs within a light card
+    & input[type="text"], input[type="email"] {
+      background-color: $white !important;
+    }
+  }
+}
+
+.card-clear {
+  @include border-radius(10px);
+  box-shadow: 1px 2px 4px 0px darken($background-color, 6%);
+  overflow: hidden;
+  font-size: 1rem;
+}

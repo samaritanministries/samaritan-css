@@ -1,0 +1,54 @@
+// Back text within modal
+.go-back {
+  font-size: 0.9rem;
+  padding: 0 0 1rem 0;
+  color: #545C61;
+  cursor:pointer;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+// ----- Bill Validation Modal ----- //
+.search-provider, .add-edit-bill, .edit-provider {
+  //Overrides dash-modal styles
+  .dash-modal-inner {
+    background-color: #F1F3F5;
+    overflow: hidden;
+    padding: 1.5rem;
+  }
+}
+
+.search-provider {
+  .dash-modal-inner {
+    @media #{$desktop} {
+      max-width: 55rem;
+      width: 100%;
+    }
+  }
+}
+
+
+hr {
+  border-top: 1px solid $input-border;
+  &.full { margin: 1rem -1.5rem !important; }
+}
+
+// ----- Input styles ----- //
+input[type="text"], input[type="email"] {
+  background-color: $input-background;
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+  padding: 0.6rem;
+  -webkit-appearance: none;
+  width: 100%;
+
+  &:focus {
+    color: #2D2D2D;
+    background-color: $white;
+    border: 2px solid $input-focus;
+    outline-color: transparent;
+    outline-style: none;
+  }
+}

@@ -1,0 +1,29 @@
+// Container styles
+.app-container {
+  @extend %clearfix;
+  background-color: $background-color;
+  min-height: 100vh;
+  padding: 2rem 0.5rem;
+  @media #{$tablet} { padding: 2rem 1rem; }
+  @media #{$desktop} { padding: 2rem; }
+}
+
+.content-container {
+  margin-top: 5rem;
+}
+
+// Extended Grid
+.row { padding: 0; }
+
+.column {
+
+  &.sixth {
+    width: 100%;
+
+    @media #{$tablet} {
+      width: 16.666%;
+    }
+  }
+
+  &.nested { padding: 0.5rem 0.6rem; }
+}

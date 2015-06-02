@@ -1,0 +1,197 @@
+$report-issue-background: #F9F9F9;
+
+// Popover styles
+.popover-overlay {
+  @extend .overlay;
+  background-color: rgba(31,31,35, 0.45) !important;
+  overflow: hidden !important;
+}
+
+.popover {
+  @include border-radius(15px);
+  @include user-select(none);
+  display: block;
+  background-color: #ECEDEF;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  position: absolute;
+  width: 20rem;
+  box-shadow: 2px 4px 10px 1px rgba(31,31,35, 0.1);
+
+// Popover caret
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 15.4rem;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #ECEDEF transparent;
+    border-style: solid;
+    border-width: 10px;
+  }
+
+// Report Issue popover
+  &.report-issue {
+    padding: 1.5rem 0.35rem 1.2rem 1.2rem;
+    margin: 1rem 0 0 -15.1rem;
+
+    .popover-label { font-size: 1.2rem; }
+
+    .issues-container {
+      overflow-y: auto;
+      max-height: calc(100vh - 14.5rem);
+      min-height: 7.5rem;
+      padding-right: 0.85rem;
+    }
+
+    // Comment Popover
+    &.comment { margin: 1.5rem 0 0 -5.5rem; }
+
+    // Popover textarea styles
+    textarea {
+      background-color: $white;
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      min-height: 5rem;
+
+      &.issue-textarea {
+        border-radius: 0 0 5px 5px;
+        border-style: solid;
+        border-width: 1px 0 0 0;
+        resize: none;
+        padding: 0.6rem 4.2rem 0.6rem 0.6rem;
+        margin-bottom: -4px;
+
+        &:focus { resize: vertical; }
+      }
+    }
+
+    // Collapsed comments
+    .display-mode {
+      background-color: $report-issue-background;
+      border-radius: 5px;
+      border: 1px solid $input-border;
+      cursor: pointer;
+      margin-top: 0.7rem;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+      &:hover { border: 1px solid rgba(128, 128, 128, 0.6); }
+
+      textarea {
+        background-color: $report-issue-background;
+        border-color: transparent;
+        border-style: hidden;
+        border-width: 0;
+        cursor: pointer;
+        min-height: 0 !important;
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        margin-top: -1.8rem;
+      }
+
+      .remove-link { display: none !important; }
+
+      .select2-container .select2-choice {
+        background-color: transparent !important;
+        border: none;
+        padding: 0 0 0 0.5rem;
+        font-weight: 600;
+        pointer-events: none;
+      }
+
+      .select2-container {
+        background-color: $report-issue-background;
+        padding: 0.7rem 0 0.2rem 0;
+        pointer-events: none;
+      }
+      .select2-container .select2-choice .select2-arrow b { display: none; }
+    }
+
+    // Editing comments
+    .edit-mode {
+      background-color: transparent;
+      border-radius: 5px;
+      border: 1px solid #939393;
+      margin-top: 0.7rem;
+      margin-bottom: 1px;
+      padding: 0;
+
+      .select2-container .select2-choice {
+        @include border-radius(5px 5px 0 0);
+        border: none;
+        &:focus { border: none; }
+      }
+
+      .remove-link { display: block; }
+    }
+
+    // Popover Font Styles
+    h3 {
+      color: $dark-gray;
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6rem;
+
+      &.remove-link {
+        border: 1px solid;
+        border-radius: 3px;
+        background-color: #F5F6F7;
+        color: #C0C0C0;
+        cursor: pointer;
+        display: block;
+        font-size: 0.8rem;
+        float: right;
+        margin: -2.1rem 0.4rem 0 0;
+        position: relative;
+        padding: 0.7rem 0.4rem;
+        line-height: 0;
+
+        &:hover {
+          background-color: #EBEBEB;
+          color: #797B7D;
+        }
+      }
+    }
+
+    // Disabled save button
+    button[disabled] {
+      background-color: rgba(59,183,116, 0.4);
+      color: rgba(255,255,255, 0.7);
+    }
+
+    // "+ Add a New Issue" link
+    .add-issue {
+      color: #555;
+      cursor: pointer;
+      padding: 0.8rem 0;
+      margin-right: 1.2rem;
+      &:hover { color: #A4A4A5; }
+      &.disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+    }
+
+    .margin-top { margin-top: 0.8rem; }
+  }
+
+  // Direct Report Issue scrollbar styles
+  >::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  >::-webkit-scrollbar-thumb {
+    background-color: lighten($gray, 10%);
+    border-radius: 10px;
+  }
+
+  >::-webkit-scrollbar-track {
+    background-color: rgba(213, 213, 220, 0.6);
+    border-radius: 10px;
+  }
+}

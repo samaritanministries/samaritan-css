@@ -1,0 +1,137 @@
+// Internal utilities (reusable styles) //
+html { background-color: #434449; }
+
+body, input, textarea, button {
+  color: $body-color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ----- Input styles ----- //
+input[type="text"], input[type="email"] {
+  background-color: $input-background;
+  border: 1px solid $input-border;
+  border-radius: 5px;
+  padding: 0.6rem;
+  -webkit-appearance: none;
+  width: 100%;
+
+  &:focus {
+    color: #2D2D2D;
+    background-color: $white;
+    border: 1px solid $input-focus;
+    outline-color: transparent;
+    outline-style: none;
+  }
+}
+
+// ----- Default textarea styles ----- //
+textarea {
+  background: $input-background;
+  border: 1px solid $input-border;
+  border-radius: 5px;
+  padding: 0.6rem;
+  resize: vertical;
+  width: 100%;
+
+  &:focus {
+  background: #FFFFFF;
+  border: 1px solid #939393;
+  color: #2D2D2D;
+  outline-color: transparent;
+  outline-style: none;
+  }
+}
+
+// ----- Issue count ----- //
+.issue-count {
+  background-color: $orange;
+  border-radius: 1rem;
+  color: #F1F2F3;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 50%;
+  padding: 0.6rem;
+  pointer-events: none;
+  text-align: center;
+
+  // Issue count in button
+  &.contained {
+    margin: -0.6rem -0.6rem -0.6rem 0.3rem;
+    background-color: $dark-orange;
+  }
+}
+
+// ----- Card styles ----- //
+.card {
+  @include border-radius(10px);
+  background-color: #E4E7EA;
+  border: 1px solid #D5D5DC;
+  padding: 1rem;
+  margin: 0 auto 2rem auto;
+}
+
+.card-clear {
+  @include border-radius(10px);
+  box-shadow: 1px 2px 4px 0px darken($background-color, 6%);
+  display: block;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+// ----- Margin Utilities ----- //
+.margin-top { margin-top: 1rem; }
+.margin-bottom { margin-bottom: 1rem; }
+.margin-left { margin-left: 1rem; }
+.margin-right { margin-right: 1rem; }
+.no-margin { margin: 0; }
+
+.hidden { display: none !important; }
+.read-only {
+  background-color: $read-only !important;
+  border: 1px solid $read-only !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+// ----- Typography Utilities ----- //
+.center-align { text-align: center; }
+.left-align { text-align: left; }
+.right-align { text-align: right; }
+.pointer { cursor: pointer; }
+
+//Text overflow ellipsis
+.no-wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// ----- Hidden ----- //
+.mobile-hide {
+  display: none;
+  @media #{$tablet} { display: block; }
+}
+
+.mobile-hide-inline {
+  display: none;
+  @media #{$tablet} { display: inline; }
+}
+
+.tablet-hide {
+  display: none;
+  @media #{$desktop} { display: block; }
+}
+
+// ----- Mixins ----- //
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex($item) {
+  -webkit-flex: $item;
+  -moz-box-flex: $item;
+  flex: $item;
+}

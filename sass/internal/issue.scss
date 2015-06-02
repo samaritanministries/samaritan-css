@@ -1,0 +1,29 @@
+// ----- Issue count ----- //
+.issue-count {
+  background-color: $orange;
+  border-radius: 1rem;
+  color: #F1F2F3;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 50%;
+  padding: 0.6rem;
+  pointer-events: none;
+  text-align: center;
+
+  // Issue count in button
+  &.contained {
+    margin: -0.6rem -0.6rem -0.6rem 0.3rem;
+    background-color: $dark-orange;
+  }
+}
+
+//Inline issue label
+.issue-label {
+  color: $dark-orange;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 50%;
+  padding: 0.6rem;
+}
