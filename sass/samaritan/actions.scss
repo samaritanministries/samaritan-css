@@ -47,10 +47,10 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 #{$buttons} {
-  @extend .button.button-primary;
+  @extend .button.button-green;
 
   &:hover, &:focus {
-    @extend .button.button-primary:hover;
+    @extend .button.button-green:hover;
   }
 
   &.primary, &.button-primary { // TODO phase out ".primary", use ".button-primary" instead
