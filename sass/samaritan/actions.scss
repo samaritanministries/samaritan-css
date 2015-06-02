@@ -8,12 +8,13 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 #{$buttons} {
   @include border-radius(50px);
   @include user-select(none);
+  -webkit-font-smoothing: auto;
   border: 2px solid;
   cursor: pointer;
   display: block;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 0;
+  letter-spacing: 0.05rem;
   outline: none;
   padding: 0.8rem 1rem;
   text-align: center;
@@ -22,7 +23,6 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 
   @media #{$tablet} {
     display: inline-block;
-    font-size: 1rem;
     padding: 0.5rem 1rem;
     padding-top: 0.4rem;
   }
