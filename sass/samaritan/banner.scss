@@ -1,0 +1,40 @@
+.banner, .flash { //TODO remove .flash class from apps
+  padding: 1rem;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+
+  .banner-icon, .flash-icon { //TODO remove .flash-icon class from apps
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+  }
+
+  &.banner-error, .error { //TODO remove .error class from apps
+    //@extend icon instead of specific reference
+    background: $red;
+    .flash-icon { background-image: url(../bower_components/samaritan-css/images/error-white.svg); }
+  }
+
+  &.banner-success, .success { //TODO remove .success class from apps
+    //@extend icon instead of specific reference
+    background: $green;
+    .flash-icon { background-image: url(../bower_components/samaritan-css/images/success-white.svg); }
+  }
+
+
+  .banner-title, h3 { //TODO remove h3 from apps
+    color: $white;
+    display: inline-block;
+    font-size: $medium-size;
+    margin: 0;
+    vertical-align: middle;
+  }
+}

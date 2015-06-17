@@ -1,24 +1,3 @@
-.flash {
-  .flash-icon {
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    vertical-align: middle;
-  }
-
-  &.error {
-    background: #d65052;
-    .flash-icon { background-image: url(../bower_components/samaritan-css/images/error-white.svg); }
-  }
-
-  &.success {
-    background: #60bf85;
-    .flash-icon { background-image: url(../bower_components/samaritan-css/images/success-white.svg); }
-  }
-}
-
 .icon-x {
   background-image: url(../images/icon-x.svg);
   background-repeat: no-repeat;

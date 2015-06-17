@@ -1,98 +1,107 @@
-/* Labels
- ============================================ */
+$inputs: 'select, textarea,input[type="date"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
 
-label {
-  color: #747475;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  font-size: 0.85rem;
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 
-  &.inline {
-    display: inline-block;
+  label {
+    display: block;
+    font-size: $small-size;
+    font-weight: $semibold;
+    margin-bottom: 0.3rem;
+
+    &.inline {
+      @include user-select(none);
+      font-size: 1rem;
+      display: inline-block;
+      font-weight: normal;
+      cursor: pointer;
+    }
+  }
+
+  #{$inputs} {
+    @include border-radius(5px);
+    -webkit-appearance: none;
+    background-color: $white;
+    border: 2px solid $gray-100;
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0.6rem;
+    width: 100%;
+    resize: vertical;
+
+    &:focus {
+      border-color: $blue;
+      outline-color: transparent;
+      outline-style: none;
+    }
+
+    &[disabled] {
+      background-color: $gray-100 !important;
+      cursor: default !important;
+    }
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    float: left;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+  }
+
+  select {
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+
+  &.error, &.issue {
+    .messages {
+      margin: 0;
+      margin-top: 0.7rem;
+      padding: 0;
+      list-style: none;
+      overflow: auto;
+
+      li {
+        float: left;
+        font-size: $body-size;
+        margin-right: 0.5rem;
+      }
+    }
   }
 
   &.error {
-    color: #dd4b39 !important;
-  }
-}
+    label, #{$inputs} {
+      color: $red;
+      border-color: $red-1;
+    }
 
+    #{$inputs} {
+      &:focus {
+        border-color: $red;
+      }
+    }
 
-/* Inputs
- ============================================ */
-
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="email"]  {
-  @include border-radius(5px);
-  -webkit-appearance: none;
-  background-color: $white;
-  border: 2px solid $gray-1;
-  font-size: 1rem;
-  max-width: 100%;
-  padding: 0.6rem;
-  width: 100%;
-
-  &:focus {
-    border-color: $blue;
-    outline-color: transparent;
-    outline-style: none;
-  }
-
-  &[disabled] {
-    background-color: $gray-1 !important;
-    cursor: default !important;
-  }
-
-  &.input-issue {
-    border-color: $orange !important;
-  }
-
-  &.input-error {
-    border-color: $red !important;
-  }
-}
-
-select {
-  width: 100%;
-}
-
-.checkbox-group {
-  ol, ul {
-    margin: 0;
-    padding-left: 1.2rem;
-  }
-
-  li {
-    margin-bottom: 1.3rem;
-    font-size: 1rem;
-  }
-
-  label {
-    font-size: 1rem !important;
-    font-weight: normal;
-    color: #343434;
-
-
-    &.inline {
-      margin-right: 0.9rem;
-      margin-left: 0.2rem;
-      margin-top: 0.3rem;
+    .messages li {
+      color: $red;
     }
   }
-}
 
-input.verification-code {
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  text-transform: uppercase;
-  padding: 0.5rem;
-}
+  &.issue {
+    label, #{$inputs} {
+      color: $orange;
+      border-color: $orange-3;
+    }
 
-input[disabled], select[disabled], textarea[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed !important;
+    #{$inputs} {
+      &:focus {
+        border-color: $orange;
+      }
+    }
+
+    .messages li {
+      color: $orange;
+    }
+  }
 }
