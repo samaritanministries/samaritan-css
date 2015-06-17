@@ -6,6 +6,7 @@
 app/bower_components
 dist
 sass/samaritan.css
+sass/samaritan.css.map
 test/temp
 node_modules
 test.css
