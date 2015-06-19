@@ -29,7 +29,6 @@ fieldset {
     max-width: 100%;
     padding: 0.6rem;
     width: 100%;
-    resize: vertical;
 
     &:focus {
       border-color: $blue;
@@ -48,6 +47,10 @@ fieldset {
     float: left;
     margin-top: 0.3rem;
     margin-right: 0.5rem;
+  }
+
+  input[type=textarea] {
+    resize: vertical;
   }
 
   select {
