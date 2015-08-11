@@ -1,0 +1,45 @@
+/* Custom Checkboxes
+  ================================================== */
+
+.checkbox-custom {
+  input { // Put the input behind the label so it doesn't overlay text
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label:before {
+    @include user-select(none);
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-color: $white;
+    float: left;
+    margin-right: 0.5rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 2px solid $gray-200;
+    display: block;
+
+    &.disabled {
+      background-color: $gray;
+      border: 2px solid $gray;
+    }
+  }
+
+  input:focus ~ label:before {
+    box-shadow: 0 0 0 2px $blue-4;
+    background-color: $white;
+  }
+
+  input:checked ~ label:before, input:active ~ label:before {
+    color: $white;
+    background-color: $blue;
+    border: 2px solid $blue;
+    background-position: 0px 0px;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <path fill="#FFFFFF " d="M6.969,13.5c-0.269,0-0.532-0.09-0.745-0.259l-3.266-2.578c-0.522-0.412-0.611-1.168-0.199-1.69 c0.413-0.522,1.17-0.609,1.69-0.199l2.208,1.743l4.618-7.448c0.35-0.564,1.091-0.74,1.656-0.388c0.565,0.35,0.739,1.092,0.389,1.657 l-5.328,8.593c-0.181,0.291-0.477,0.491-0.814,0.551C7.108,13.494,7.038,13.5,6.969,13.5z"/></svg>');
+    background-size: 100%;
+  }
+}

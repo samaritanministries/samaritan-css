@@ -12,7 +12,9 @@
 /* Mobile grid (default)
   ================================================== */
 
-html { font-size: 100%; }
+html {
+  font-size: 100%;
+}
 
 .row {
   @extend %clearfix;
@@ -25,8 +27,9 @@ html { font-size: 100%; }
   @extend %clearfix;
   padding: $grid-gutter;
 
-  /* Removes extra padding when nesting columns */
-  &.group { padding: 0; }
+  &.group, &.nested { // TODO .group is deprecated, use .nested instead
+    padding: 0.5rem;
+  }
 
   &.full,
   &.two-thirds,
@@ -34,8 +37,8 @@ html { font-size: 100%; }
   &.half,
   &.third,
   &.fourth,
-  &.sixths,
-  &.eighths {
+  &.sixth,
+  &.eighth {
     width: 100%;
   }
 }
@@ -44,7 +47,9 @@ html { font-size: 100%; }
   ================================================== */
 
 @media #{$tablet} {
-  html { font-size: 105%; }
+  html {
+    font-size: 105%;
+  }
 
   .column {
     float: left;
@@ -59,10 +64,12 @@ html { font-size: 100%; }
     &.half { width: 50%; }
     &.third { width: 33.333%; }
     &.fourth { width: 25%; }
-    &.sixths { width: 16.666%; }
-    &.eighths { width: 12.5%; }
+    &.sixth { width: 16.666%; }
+    &.eighth { width: 12.5%; }
 
-    &.flow-opposite { float: right;}
+    &.flow-opposite {
+      float: right;
+    }
 
     &.center {
       float: none;
@@ -75,5 +82,7 @@ html { font-size: 100%; }
   ================================================== */
 
 @media #{$desktop} {
-  html { font-size: 110%; }
+  html {
+    font-size: 110%;
+  }
 }

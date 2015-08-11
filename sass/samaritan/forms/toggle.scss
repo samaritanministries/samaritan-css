@@ -1,0 +1,89 @@
+//----- On-off switch -----//
+.onoffswitch {
+  @include user-select(none);
+  position: relative;
+  width: 50px;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+//Inactive
+.onoffswitch-label {
+  @include border-radius(50px);
+  background-color: $orange;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+}
+
+//Toggle transition
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.2s ease-in 0s;
+  -webkit-transition: margin 0.2s ease-in 0s;
+  -o-transition: margin 0.2s ease-in 0s;
+  transition: margin 0.2s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: .85rem;
+  color: white;
+}
+
+//Active
+.onoffswitch-inner:before {
+  content: url("../images/checkmark.svg");
+  padding-top: 5px;
+  padding-left: 4px;
+  background-color: $green;
+  color: $white;
+}
+
+.onoffswitch-inner:after {
+  content: url("../images/issue.svg");
+  padding-top: 5px;
+  padding-right: 4px;
+  background-color: $orange;
+  color: #BBB;
+  text-align: right;
+}
+
+//Inactive circle position
+.onoffswitch-switch {
+  display: block;
+  width: 20px;
+  margin: 8px 0;
+  background: $white;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  @include border-radius(50%);
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  right: 23px;
+  -moz-transition: all 0.2s ease-in 0s;
+  -webkit-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked +
+.onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+//Active circle position
+.onoffswitch-checkbox:checked +
+.onoffswitch-label .onoffswitch-switch {
+  right: 5px;
+}

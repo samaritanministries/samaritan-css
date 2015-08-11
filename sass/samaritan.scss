@@ -23,5 +23,9 @@
 
 // Import Controls
   @import 'samaritan/actions';
-  @import 'samaritan/form';
+
+// Import Forms
+  @import 'samaritan/forms/form';
+  @import 'samaritan/forms/checkbox';
+  @import 'samaritan/forms/toggle';
   @import 'vendor/select2';
