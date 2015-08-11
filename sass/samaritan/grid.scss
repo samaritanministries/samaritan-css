@@ -1,9 +1,3 @@
-$global-content-width: 1000px;
-
-$tablet: "all and (min-width: 40em)" !default;
-$desktop: "all and (min-width: 64em)" !default;
-
-
 /* Reset all box styles
   ================================================== */
 
@@ -29,7 +23,7 @@ html { font-size: 100%; }
 
 .column {
   @extend %clearfix;
-  padding: 1rem;
+  padding: $grid-gutter;
 
   /* Removes extra padding when nesting columns */
   &.group { padding: 0; }

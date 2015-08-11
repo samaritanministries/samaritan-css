@@ -2,7 +2,6 @@
 
 // Import Core Libraries
   @import 'vendor/normalize';
-  @import 'samaritan/grid';
 
 // Import Utilities
   @import 'samaritan/mixins';
@@ -14,6 +13,8 @@
   @import 'samaritan/typography';
 
 // Import Containers
+  @import 'samaritan/grid';
+  @import 'samaritan/flex';
   @import 'samaritan/modal';
   @import 'samaritan/containers';
   @import 'samaritan/card';

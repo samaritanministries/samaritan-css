@@ -1,3 +1,15 @@
+/* Core Variables
+  ================================================== */
+
+$global-content-width: 1000px !default;
+
+$grid-gutter: 1rem !default;
+
+$phone: "all and (max-width: 40em)" !default;
+$tablet: "all and (min-width: 40em)" !default;
+$desktop: "all and (min-width: 64em)" !default;
+
+
 /* Action classes
   ================================================== */
 
@@ -59,6 +71,20 @@
 
 .relative {
   position: relative !important;
+}
+
+/* Grid Utilities
+  ================================================== */
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex($item) {
+  -webkit-flex: $item;
+  -moz-box-flex: $item;
+  flex: $item;
 }
 
 
