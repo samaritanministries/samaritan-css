@@ -1,4 +1,7 @@
-// CORE MODAL --------------------------------------------
+/* Core Modal Styles
+  ================================================== */
+
+$modal-gutter: 1rem !default;
 
 .overlay {
   background-color: rgba(31,31,35, 0.85);
@@ -13,193 +16,60 @@
   @include animation("fadeIn 200ms");
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   border-radius: 15px;
   background-color: #FFF;
   margin: 1.5rem auto 1.5rem auto;
-  max-width: 32rem;
+  max-width: 35rem;
   outline: 0;
-  padding: 2rem;
   width: 90%;
   z-index: 1050;
   cursor: default;
+  overflow: hidden;
 
   @media #{$tablet} {
     margin: 5rem auto 5rem auto;
   }
 
-  .modal-title {
-    margin: 0;
+  &.modal-small {
+    max-width: 25rem;
   }
 
-  .modal-description {
-    font-size: 1.1rem;
-    margin: 0;
-    margin-top: 0.5rem;
-    color: #666666;
+  &.modal-large {
+    max-width: 45rem;
   }
 
-  .modal-actions {
+  .modal-header, .modal-content, .modal-footer {
     text-align: center;
-    margin-top: 1.5rem;
-  }
+    padding: $modal-gutter;
 
-  .modal-close {
-    margin-left: 0.7rem;
-    color: #666666;
-    font-weight: 600;
-  }
-
-  .icon.close {
-    position: relative;
-    margin-right: -1rem;
-    margin-top: -1rem;
-    top: 0.8rem;
-    right: 0.8rem;
-
-    &.large {
-      margin-right: -2rem;
-      margin-top: -2rem;
-      top: 1rem;
-      right: 1rem;
-    }
-  }
-}
-
-
-// GENERAL MODAL STYLES -----------------------------------
-
-.modal {
-  hr { // TODO REFACTOR
-    margin: 1.5rem 0 !important;
-
-    &.full {
-      margin: 1.5rem -1.5rem -0.2rem -1.5rem;
+    hr {
+      margin: #{$modal-gutter} -#{$modal-gutter};
     }
   }
 
-  p { // TODO REFACTOR
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.7rem;
-    color: #939393;
+  .modal-header {
+    border-bottom: 2px solid $gray-150;
 
-    &.left {
-      text-align: left;
-    }
-
-    &.intro {
-      color: #373737;
-      font-size: 1.25rem;
-      line-height: 2rem;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
     }
   }
 
-  .column { // TODO REFACTOR
-    padding: 0.5rem 0 !important;
-  }
-
-  .close { // TODO REFACTOR
-    display: block;
-    font-size: 1rem;
-    margin-top: 1rem;
-    text-align: center;
-
-    @media #{$tablet} {
-      display: inline-block;
-      margin-left: 1rem;
-      margin-top: 0;
-    }
-  }
-}
-
-
-// MODAL STYLES -------------------------------------------
-.modal-transparent {
-  max-width: $global-content-width;
-  width: auto;
-  padding: 0;
-  background-color: transparent;
-
-  .column {
-    padding: 0.5rem 1rem !important;
-  }
-
-  .icon.close.large {
-    margin: 0;
-    top: 0;
-    right: 0;
-  }
-}
-
-
-// MODAL SIZES --------------------------------------------
-.modal-small {
-  max-width: 25rem;
-}
-
-.modal-open { // TODO REFACTOR
-  overflow: hidden;
-}
-
-
-// BUTTONS ------------------------------------------------
-
-.modal { // TODO REMOVE THIS CRAP
-  .button {
-    display: block;
-    width: 100%;
-
-    @media #{$tablet} {
-      width: auto;
-      display: inline-block;
+  .modal-content {
+    p {
+      font-size: $medium-size;
+      margin: 0.5rem;
+      line-height: 1.7rem;
+      color: $gray-500;
     }
   }
 
-  .button-wrap {
-    text-align: center;
-    @extend %clearfix;
-    padding: 0;
-
-    &.button-wrap-center {
-      margin: 0 auto;
-      max-width: 19rem;
-    }
-
-    .button,
-    .secondary {
-      display: block;
-      width: 100%;
-    }
-
-    .close {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      text-align: center;
-    }
-  }
-
-  @media #{$tablet} {
-    .button-wrap {
-      .button,
-      .secondary,
-      .close {
-        float: left;
-        width: auto;
-      }
-
-      .close {
-        margin-top: .8rem;
-        margin-left: 1rem;
-      }
-
-      .center-button {
-        float: none;
-        margin: 0 auto;
-      }
-    }
+  .modal-footer {
+    background-color: $gray-100;
   }
 }

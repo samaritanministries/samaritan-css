@@ -1,3 +1,6 @@
+/* Core Containers TODO refactor this
+  ================================================== */
+
 .placeholder-container {
   margin: 1rem auto;
   padding: 2rem;
@@ -11,4 +14,9 @@
   @media #{$tablet} {
     width: 10rem;
   }
+}
+
+hr {
+  border: none;
+  border-top: 2px solid $gray-200;
 }

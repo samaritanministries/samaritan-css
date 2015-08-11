@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../sass/samaritan.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Modal Example</title>
+
+    <script>
+      $(document).ready(function() {
+        $('#banner-example-error-clicker').click(function() {
+          $('#banner-example-error').removeClass('hide');
+        });
+
+        $('#banner-example-success-clicker').click(function() {
+          $('#banner-example-success').removeClass('hide');
+        });
+      });
+    </script>
+  </head>
+  <body style="padding: 1rem; background-color: #fff">
+    <div class="row-flex">
+      <div class="column-flex">
+        <h1>Modal Example</h1>
+      </div>
+    </div>
+
+    <div class="row-flex">
+      <div class="column-flex">
+        <a href="#" class="button" id="banner-example-error-clicker">Call Error Banner</a>
+        <a href="#" class="button" id="banner-example-success-clicker">Call Success Banner</a>
+      </div>
+    </div>
+
+    <div id="banner-example-error" class="banner banner-error hide">
+      <div class="banner-icon"></div>
+      <div class="banner-title">Banner Error Test.</div>
+    </div>
+
+    <div id="banner-example-success" class="banner banner-success hide">
+      <div class="banner-icon"></div>
+      <div class="banner-title">Banner Success Test.</div>
+    </div>
+  </body>
+</html>
