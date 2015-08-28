@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link href="sass/example.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Colors</title>
+
     <style>
       .example-flex {
         overflow: auto;
@@ -25,10 +27,45 @@
         float: left;
       }
 
+      .example-flex .column-flex:hover {
+        box-shadow: inset 0px 0px 0px 4px #000;
+        text-transform: uppercase;
+      }
+
       .default {
         margin-top: 2rem !important;
       }
     </style>
+
+    <script>
+      $(document).ready(function() {
+        var color;
+        var text;
+
+        $('.example-flex .column-flex').hover(
+          function() {
+            var x = $(this).css('backgroundColor');
+            hexc(x);
+            text = $(this).text();
+            $(this).text(color);
+          },
+
+          function() {
+            $(this).text(text);
+          }
+        );
+
+        function hexc(colorval) {
+            var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            delete(parts[0]);
+            for (var i = 1; i <= 3; ++i) {
+                parts[i] = parseInt(parts[i]).toString(16);
+                if (parts[i].length == 1) parts[i] = '0' + parts[i];
+            }
+            color = '#' + parts.join('');
+        }
+      });
+    </script>
   </head>
   <body style="padding: 1rem; background-color: #fff">
     <div class="row-flex">
