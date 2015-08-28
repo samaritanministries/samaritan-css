@@ -78,7 +78,7 @@ fieldset {
   &.error {
     label, #{$inputs} {
       color: $red;
-      border-color: $red-1;
+      border-color: $red-50;
     }
 
     #{$inputs} {
@@ -95,7 +95,7 @@ fieldset {
   &.issue {
     label, #{$inputs} {
       color: $orange;
-      border-color: $orange-3;
+      border-color: $orange-200;
     }
 
     #{$inputs} {

@@ -113,7 +113,7 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   }
 
   &.button-gray {
-    @include button($background-color: $gray-light, $border-color: $gray-light, $type-color: $gray-dark, $on-hover: 'darken');
+    @include button($background-color: $gray-200, $border-color: $gray-200, $type-color: $gray-900, $on-hover: 'darken');
   }
 }
 

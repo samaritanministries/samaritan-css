@@ -58,7 +58,7 @@ a {
   color: $blue;
 
   &:hover, &:focus {
-    color: $blue-5;
+    color: $blue-400;
   }
 }
 
@@ -67,6 +67,6 @@ a {
   ================================================== */
 
 p {
-  color: $body-color;
+  color: $gray-900;
   line-height: 1.25rem;
 }
