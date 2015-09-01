@@ -1,0 +1,80 @@
+$menu-height-condensed: 4rem;
+$menu-height-expanded: 7.05rem;
+$menu-color: $gray-100 !default;
+
+@function set-auto-color($color) {
+  @if (lightness($color) > 50) { @return $gray-900; }
+  @else { @return $white; }
+}
+
+.app-menu {
+  @extend .app-menu.condensed;
+  background-color: rgba($menu-color, 0.97);
+  box-shadow: 0 2px 6px $gray-200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+
+  .app-context {
+    @extend %app-content-width;
+    @extend %clearfix;
+    margin: auto;
+    padding: 1.3rem 1rem;
+
+    .app-title {
+      color: set-auto-color($menu-color);
+      font-size: $large-size;
+      font-weight: 600;
+    }
+  }
+
+  .app-navigation {
+    @extend %remove-list-style;
+    @extend %app-content-width;
+    @extend %clearfix;
+    margin: auto;
+
+    li {
+      @extend %action;
+      float: left;
+      margin: 0 1rem;
+      padding: 0.7rem 0;
+      line-height: 0.9rem;
+      color: rgba(set-auto-color($menu-color), .60);
+      font-size: 1rem;
+      transition: all ease-in-out 0.2s;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        color: set-auto-color($menu-color);
+      }
+
+      &.active {
+        color: set-auto-color($menu-color);
+        border-bottom: 4px solid;
+      }
+    }
+  }
+
+  &.expanded {
+    height: $menu-height-expanded;
+  }
+
+  &.condensed {
+    height: $menu-height-condensed;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+}
+
+.app-menu ~ .app-content {
+  padding-top: $menu-height-condensed;
+}
+
+.app-menu.expanded ~ .app-content {
+  padding-top: $menu-height-expanded;
+}

@@ -5,21 +5,26 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
 /* Core Button Setup
   ================================================== */
 
+%action {
+  @include user-select(none);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
 #{$buttons} {
   @include border-radius(50px);
   @include user-select(none);
+  @extend %action;
+
   -webkit-font-smoothing: auto;
   border: 2px solid;
-  cursor: pointer;
   display: block;
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.05rem;
-  outline: none;
   padding: 0.8rem 1rem;
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
 
   @media #{$tablet} {
     display: inline-block;
@@ -122,16 +127,13 @@ $button-disabled: "&[disabled], &.disabled, &.button-disabled";
   ================================================== */
 
 .action-primary {
+  @extend %action;
   color: $blue;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  &:hover { color: lighten($blue, 10%); }
+  &:hover { color: rgba($blue, .90); }
 }
 
 .action-secondary {
-  @extend .action-primary;
+  @extend %action;
   color: $gray;
-  &:hover { color: darken($gray, 10%); }
+  &:hover { color: rgba($gray, .90); }
 }
