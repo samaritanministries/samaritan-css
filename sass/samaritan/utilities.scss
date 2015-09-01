@@ -69,6 +69,20 @@ ul, ol {
   position: relative !important;
 }
 
+
+/* Extendables
+  ================================================== */
+
+%action {
+  @include user-select(none);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
 %remove-list-style {
   margin: 0;
   padding: 0;
@@ -82,6 +96,7 @@ ul, ol {
 %clearfix {
   overflow: auto;
 }
+
 
 /* Grid Utilities
   ================================================== */
