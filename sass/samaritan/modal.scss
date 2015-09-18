@@ -3,7 +3,11 @@
 
 $modal-gutter: 1rem !default;
 
-.overlay {
+.modal-open {
+  overflow: hidden;
+}
+
+.dash-overlay, .overlay {
   background-color: rgba(31,31,35, 0.85);
   overflow-x: hidden;
   overflow-y: auto;
@@ -16,11 +20,7 @@ $modal-gutter: 1rem !default;
   @include animation("fadeIn 200ms");
 }
 
-.modal-open {
-  overflow: hidden;
-}
-
-.modal {
+.dash-modal, .modal {
   border-radius: 15px;
   background-color: #FFF;
   margin: 1.5rem auto 1.5rem auto;
