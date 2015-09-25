@@ -1,17 +1,5 @@
 /*! Samaritan.css v1 - goo.gl/eYtizL | MIT License */
 
-// Import Core Libraries
-  @import 'vendor/normalize';
-
-// Import Utilities
-  @import 'samaritan/settings';
-  @import 'samaritan/mixins';
-  @import 'samaritan/utilities';
-
-// Import Asthetic Components
-  @import 'samaritan/colors';
-  @import 'samaritan/typography';
-
 // Import Containers
   @import 'samaritan/grid';
   @import 'samaritan/flex';
