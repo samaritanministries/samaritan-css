@@ -7,8 +7,8 @@ fieldset {
 
   label {
     display: block;
-    font-size: $small-size;
-    font-weight: $semibold;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-semibold;
     margin-bottom: 0.3rem;
     text-align: left;
 
@@ -69,7 +69,7 @@ fieldset {
 
       li {
         float: left;
-        font-size: $body-size;
+        font-size: $font-size-normal;
         margin-right: 0.5rem;
       }
     }

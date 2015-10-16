@@ -1,27 +1,15 @@
-/*! Samaritan.css v1 - goo.gl/eYtizL | MIT License */
+/*! Samaritan.css v1.1.0 | MIT License */
 
 // Import Core Libraries
-  //@import '../bower_components/normalize/normalize.css';
-  //@import '../bower_components/dashing-core/sass/dashing-core';
-  //@import '../bower_components/dashing-grid/sass/dashing-grid';
+  @import '../bower_components/normalize/normalize.css';
+  @import '../bower_components/dashing-core/sass/dashing-core';
 
 // Import Utilities
   @import 'samaritan/setup';
-
-// Import Aesthetic Components
-  @import 'samaritan/typography';
-
-// Import Containers
-  @import 'samaritan/modal';
   @import 'samaritan/containers';
   @import 'samaritan/card';
-  @import 'samaritan/banner';
   @import 'samaritan/navigation';
-
-// Import Controls
   @import 'samaritan/actions';
-
-// Import Forms
   @import 'samaritan/forms/form';
   @import 'samaritan/forms/checkbox';
   @import 'samaritan/forms/toggle';

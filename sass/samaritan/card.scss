@@ -1,17 +1,19 @@
-// TODO Completely refactor this component!
+/* Card Variables
+  =========================================================================== */
+
+$grid-gutter: 1rem !default;
+
+/* Card Styles
+  =========================================================================== */
 
 .card {
   @include border-radius(10px);
   background-color: $white;
   border: 2px solid $gray-200;
   margin: 1.5rem auto;
-  padding: 0.5rem;
+  padding: $grid-gutter;
 
-  &.placeholder {
-    background: rgba(255,255,255,0.45);
-    border: none;
-    border-bottom: 2px solid $gray-200;
-    padding: 3rem 1rem;
-    text-align: center;
+  hr {
+    margin: ($grid-gutter) (-$grid-gutter);
   }
 }
