@@ -9,23 +9,6 @@
   animation: $attributes;
 }
 
-@mixin button($background-color, $border-color, $type-color, $on-hover: 'lighten') {
-  background-color: $background-color;
-  border-color: $border-color;
-  color: $type-color;
-
-  &:hover, &:focus {
-    @if $on-hover == 'darken' {
-      background-color: darken($background-color, 10%);
-      border-color: darken($border-color, 10%);
-    } @else {
-      background-color: lighten($background-color, 10%);
-      border-color: lighten($border-color, 10%);
-    }
-    color: $type-color;
-  }
-}
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -76,17 +59,6 @@
       display: $display;
     }
   }
-}
-
-@mixin flex-grow($grow) {
-  -webkit-flex-grow: $grow;
-  flex-grow: $grow;
-}
-
-@mixin flex($item) {
-  -webkit-flex: $item;
-  -moz-box-flex: $item;
-  flex: $item;
 }
 
 /* Extendables

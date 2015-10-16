@@ -3,18 +3,15 @@
 // Import Core Libraries
   //@import '../bower_components/normalize/normalize.css';
   //@import '../bower_components/dashing-core/sass/dashing-core';
+  //@import '../bower_components/dashing-grid/sass/dashing-grid';
 
 // Import Utilities
-  @import 'samaritan/settings';
-  @import 'samaritan/mixins';
-  @import 'samaritan/utilities';
+  @import 'samaritan/setup';
 
 // Import Aesthetic Components
   @import 'samaritan/typography';
 
 // Import Containers
-  @import 'samaritan/grid';
-  @import 'samaritan/flex';
   @import 'samaritan/modal';
   @import 'samaritan/containers';
   @import 'samaritan/card';
