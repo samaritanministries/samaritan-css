@@ -3,7 +3,7 @@
 .DS_Store
 .suo
 .sln
-app/bower_components
+bower_components/
 dist
 sass/samaritan.css
 sass/samaritan.css.map

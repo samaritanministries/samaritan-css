@@ -1,129 +1,28 @@
-
-$buttons: ".button, button, input[type='submit'], input[type='reset']";
-$button-disabled: "&[disabled], &.disabled, &.button-disabled";
-
-/* Core Button Setup
-  ================================================== */
-
-#{$buttons} {
-  @include border-radius(50px);
-  @include user-select(none);
-  @extend %action;
-
-  -webkit-font-smoothing: auto;
-  border: 2px solid;
-  display: block;
-  padding: 0.8rem 1rem;
-  text-align: center;
-
-  @media #{$tablet} {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    padding-top: 0.4rem;
-  }
-
-  #{$button-disabled} {
-    cursor: default;
-    opacity: 0.4;
-    pointer-events: none;
-  }
-
-  &.button-block {
-    display: block !important;
-    width: 100%;
-  }
-
-  &.button-large {
-    font-size: 1.23rem !important;
-  }
-}
-
-
-/* Aliased Buttons
-  ================================================== */
-
-#{$buttons} {
-  @extend .button.button-green;
-
-  &:hover, &:focus {
-    @extend .button.button-green:hover;
-  }
-
-  &.primary, &.button-primary { // TODO phase out ".primary", use ".button-primary" instead
-    @extend .button.button-green;
-
-    &:hover, &:focus {
-      @extend .button.button-green:hover;
-    }
-  }
-
-  &.secondary, &.button-secondary { // TODO phase out ".secondary", use ".button-secondary" instead
-    @extend .button.button-gray;
-
-    &:hover, &:focus {
-      @extend .button.button-gray:hover;
-    }
-  }
-
-  &.button-action {
-    @extend .button.button-blue;
-
-    &:hover, &:focus {
-      @extend .button.button-blue:hover;
-    }
-  }
-
-  &.button-issue {
-    @extend .button.button-orange;
-
-    &:hover, &:focus {
-      @extend .button.button-orange:hover;
-    }
-  }
-}
-
-
-/* All Button Colors
+/* Action Button Colors
   ================================================== */
 
 #{$buttons} {
   &.button-green {
-    @include button($background-color: $green, $border-color: $green, $type-color: $white);
+    @include button($background-color: $green, $color: $white);
   }
 
   &.button-blue {
-    @include button($background-color: $blue, $border-color: $blue, $type-color: $white);
+    @include button($background-color: $blue, $color: $white);
   }
 
   &.button-orange {
-    @include button($background-color: $orange, $border-color: $orange, $type-color: $white);
+    @include button($background-color: $orange, $color: $white);
   }
 
   &.button-purple {
-    @include button($background-color: $purple, $border-color: $purple, $type-color: $white);
+    @include button($background-color: $purple, $color: $white);
   }
 
   &.button-red {
-    @include button($background-color: $red, $border-color: $red, $type-color: $white);
+    @include button($background-color: $red, $color: $white);
   }
 
   &.button-gray {
-    @include button($background-color: $gray-200, $border-color: $gray-200, $type-color: $gray-900, $on-hover: 'darken');
+    @include button($background-color: $gray-200, $color: $gray-900);
   }
-}
-
-
-/* Actions
-  ================================================== */
-
-.action-primary {
-  @extend %action;
-  color: $blue;
-  &:hover { color: rgba($blue, .90); }
-}
-
-.action-secondary {
-  @extend %action;
-  color: $gray;
-  &:hover { color: rgba($gray, .90); }
 }
