@@ -1,5 +1,5 @@
-$menu-height-condensed: 4rem;
-$menu-height-expanded: 7.05rem;
+$menu-height-condensed: 4.6rem !default;
+$menu-height-expanded: 7.05rem !default;
 $menu-color: $gray-100 !default;
 
 @function set-auto-color($color) {
