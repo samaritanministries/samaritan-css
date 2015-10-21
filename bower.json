@@ -13,6 +13,6 @@
   },
 
   "dependencies": {
-    "dashing-core": "1.0.3"
+    "dashing-core": "1.0.5"
   }
 }
