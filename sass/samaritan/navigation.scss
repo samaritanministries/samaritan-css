@@ -1,9 +1,9 @@
-$menu-height-condensed: 4.6rem !default;
-$menu-height-expanded: 7.05rem !default;
+$menu-height-condensed: 4.6rem;
+$menu-height-expanded: 7.05rem;
 $menu-color: $gray-100 !default;
 
 @function set-auto-color($color) {
-  @if (lightness($color) > 50) { @return $gray-900; }
+  @if (lightness($color) > 60) { @return $gray-900; }
   @else { @return $white; }
 }
 
@@ -25,8 +25,16 @@ $menu-color: $gray-100 !default;
 
     .app-title {
       color: set-auto-color($menu-color);
-      font-size: $font-size-large;
+      font-size: $large-size;
       font-weight: 600;
+
+      a {
+        color: set-auto-color($menu-color);
+
+        &:hover {
+          color: rgba(set-auto-color($menu-color), .60);
+        }
+      }
     }
   }
 
