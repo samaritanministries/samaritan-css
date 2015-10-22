@@ -1,6 +1,7 @@
 /* Card Variables
   =========================================================================== */
 
+
 $grid-gutter: 1rem !default;
 
 /* Card Styles
@@ -25,6 +26,7 @@ $grid-gutter: 1rem !default;
     &:hover {
       @extend %shadow-100;
       border-color: $blue;
+      cursor: pointer;
     }
   }
 }
