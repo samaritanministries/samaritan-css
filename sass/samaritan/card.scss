@@ -16,4 +16,16 @@ $grid-gutter: 1rem !default;
   hr {
     margin: ($grid-gutter) (-$grid-gutter);
   }
+
+  &.card--without-padding {
+    padding: 0;
+  }
+
+  &.card--selectable {
+    &:hover {
+      @extend %shadow-100;
+      border-color: $blue;
+    }
+  }
 }
+

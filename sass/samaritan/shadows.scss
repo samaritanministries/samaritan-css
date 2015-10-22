@@ -1,0 +1,14 @@
+/* Shadow Extendables
+  =========================================================================== */
+
+%shadow-100 {
+  @include box-shadow(0 4px 8px rgba($black, 0.3));
+}
+
+%shadow-200 {
+  @include box-shadow(0 4px 16px rgba($black, 0.3));
+}
+
+%shadow-300 {
+  @include box-shadow(0 4px 24px rgba($black, 0.3));
+}
