@@ -1,0 +1,24 @@
+.data-list {
+  @extend %remove-list-style;
+  overflow: auto;
+
+  &.data-list__stacked {
+    li {
+      float: left;
+      margin-right: ($grid-gutter + 0.5rem);
+    }
+
+    .data-list__description {
+      color: $gray-900;
+      display: block;
+      font-size: 1.1rem;
+      font-weight: $font-weight-semibold;
+    }
+
+    .data-list__title {
+      color: $gray-600;
+      display: block;
+      font-size: 0.9rem;
+    }
+  }
+}
