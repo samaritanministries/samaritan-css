@@ -1,4 +1,12 @@
-@import '../../sass/samaritan.scss';
+// Import Core Libraries
+
+  @import '../../bower_components/normalize-scss/_normalize';
+  @import '../../bower_components/dashing-core/sass/dashing-core';
+  @import '../../bower_components/dashing-grid/sass/dashing-grid';
+  @import '../../bower_components/dashing-forms/sass/dashing-forms';
+  @import '../../sass/samaritan.scss';
+
+// Style Example Flex
 
 .example-flex .column-flex {
   @media #{$phone} {
