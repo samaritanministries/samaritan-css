@@ -1,5 +1,5 @@
-$menu-height-condensed: 5rem !default;
-$menu-height-expanded: 7rem !default;
+$menu-height-condensed: 5.95rem !default;
+$menu-height-expanded: 7.95rem !default;
 $menu-color: $gray-100 !default;
 
 @function set-auto-color($color) {
@@ -76,6 +76,7 @@ $menu-color: $gray-100 !default;
   }
 
   &.fixed {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
   }
 }
