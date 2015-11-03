@@ -46,10 +46,9 @@ $menu-color: $gray-100 !default;
     li {
       @extend %action;
       float: left;
-      margin: 0 0.3rem;
-      margin-right: 1rem;
-      padding: 0.7rem;
-      padding-top: 0.2rem;
+      margin: 0 1rem;
+      padding: 0.9rem 0;
+      padding-top: 0rem;
       line-height: 0.9rem;
       color: rgba(set-auto-color($menu-color), .60);
       font-size: 1rem;
