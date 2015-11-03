@@ -1,5 +1,5 @@
-$menu-height-condensed: 4.6rem;
-$menu-height-expanded: 7.05rem;
+$menu-height-condensed: 5rem !default;
+$menu-height-expanded: 7rem !default;
 $menu-color: $gray-100 !default;
 
 @function set-auto-color($color) {
@@ -20,7 +20,7 @@ $menu-color: $gray-100 !default;
     @extend %app-content-width;
     @extend %clearfix;
     margin: auto;
-    padding: 1.3rem 1rem;
+    padding: 1.5rem 1rem;
 
     .app-title {
       color: set-auto-color($menu-color);
@@ -47,7 +47,8 @@ $menu-color: $gray-100 !default;
       @extend %action;
       float: left;
       margin: 0 1rem;
-      padding: 0.7rem 0;
+      padding: 0.7rem;
+      padding-top: 0.2rem;
       line-height: 0.9rem;
       color: rgba(set-auto-color($menu-color), .60);
       font-size: 1rem;
