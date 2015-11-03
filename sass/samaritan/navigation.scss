@@ -75,7 +75,6 @@ $menu-color: $gray-100 !default;
   }
 
   &.fixed {
-    @extend %shadow-100;
     position: fixed;
   }
 }
