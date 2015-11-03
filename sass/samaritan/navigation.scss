@@ -1,5 +1,5 @@
 $menu-height-condensed: 5.95rem !default;
-$menu-height-expanded: 7.95rem !default;
+$menu-height-expanded: 7.8rem !default;
 $menu-color: $gray-100 !default;
 
 @function set-auto-color($color) {
@@ -20,7 +20,7 @@ $menu-color: $gray-100 !default;
     @extend %app-content-width;
     @extend %clearfix;
     margin: auto;
-    padding: 1.5rem 1rem;
+    padding: 1.9rem 1rem;
 
     .app-title {
       color: set-auto-color($menu-color);
@@ -52,7 +52,7 @@ $menu-color: $gray-100 !default;
       padding-top: 0.2rem;
       line-height: 0.9rem;
       color: rgba(set-auto-color($menu-color), .60);
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: all ease-in-out 0.2s;
       border-bottom: 4px solid transparent;
 
