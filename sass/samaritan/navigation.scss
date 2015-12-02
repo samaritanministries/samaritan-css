@@ -56,11 +56,15 @@ $menu-color: $gray-100 !default;
       transition: all ease-in-out 0.2s;
       border-bottom: 4px solid transparent;
 
-      &:hover {
+      a {
+        color: rgba(set-auto-color($menu-color), .60);
+      }
+
+      &:hover, & a:hover {
         color: set-auto-color($menu-color);
       }
 
-      &.active {
+      &.active, & a.active {
         color: set-auto-color($menu-color);
         border-bottom: 4px solid;
       }

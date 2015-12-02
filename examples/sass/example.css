@@ -368,7 +368,7 @@ td,
 th {
   padding: 0; }
 
-/*! dashing-core v1.0.0 | MIT License */
+/*! dashing-core v1.0.6 | MIT License */
 /* Core Variables
   =========================================================================== */
 /* Core Extendables
@@ -381,8 +381,13 @@ th {
   padding: 0;
   list-style: none; }
 
-.row, .column, .app-menu .app-context, .app-menu .app-navigation, .clearfix {
-  overflow: auto; }
+.row, .app-menu .app-context, .app-menu .app-navigation, .clearfix {
+  *zoom: 1; }
+  .row:before, .app-menu .app-context:before, .app-menu .app-navigation:before, .row:after, .app-menu .app-context:after, .app-menu .app-navigation:after, .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .row:after, .app-menu .app-context:after, .app-menu .app-navigation:after, .clearfix:after {
+    clear: both; }
 
 /* Core Mixins
   =========================================================================== */
@@ -515,6 +520,7 @@ p {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  border: none;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;
@@ -666,7 +672,7 @@ fieldset {
   margin: 0; }
   fieldset label {
     display: block;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
     text-align: left; }
@@ -680,7 +686,7 @@ fieldset {
       display: inline-block;
       font-weight: normal;
       cursor: pointer; }
-  fieldset select, fieldset textarea, fieldset input[type="date"], fieldset input[type="email"], fieldset input[type="month"], fieldset input[type="number"], fieldset input[type="password"], fieldset input[type="tel"], fieldset input[type="text"] {
+  fieldset select, fieldset textarea, fieldset input[type="date"], fieldset input[type="time"], fieldset input[type="email"], fieldset input[type="month"], fieldset input[type="number"], fieldset input[type="password"], fieldset input[type="tel"], fieldset input[type="text"] {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -693,11 +699,11 @@ fieldset {
     max-width: 100%;
     padding: 0.6rem;
     width: 100%; }
-    fieldset select:focus, fieldset textarea:focus, fieldset input[type="date"]:focus, fieldset input[type="email"]:focus, fieldset input[type="month"]:focus, fieldset input[type="number"]:focus, fieldset input[type="password"]:focus, fieldset input[type="tel"]:focus, fieldset input[type="text"]:focus {
+    fieldset select:focus, fieldset textarea:focus, fieldset input[type="date"]:focus, fieldset input[type="time"]:focus, fieldset input[type="email"]:focus, fieldset input[type="month"]:focus, fieldset input[type="number"]:focus, fieldset input[type="password"]:focus, fieldset input[type="tel"]:focus, fieldset input[type="text"]:focus {
       border-color: #6A8DD3;
       outline-color: transparent;
       outline-style: none; }
-    fieldset select[disabled], fieldset textarea[disabled], fieldset input[type="date"][disabled], fieldset input[type="email"][disabled], fieldset input[type="month"][disabled], fieldset input[type="number"][disabled], fieldset input[type="password"][disabled], fieldset input[type="tel"][disabled], fieldset input[type="text"][disabled] {
+    fieldset select[disabled], fieldset textarea[disabled], fieldset input[type="date"][disabled], fieldset input[type="time"][disabled], fieldset input[type="email"][disabled], fieldset input[type="month"][disabled], fieldset input[type="number"][disabled], fieldset input[type="password"][disabled], fieldset input[type="tel"][disabled], fieldset input[type="text"][disabled] {
       background-color: #EDEDED !important;
       cursor: default !important; }
   fieldset input[type=checkbox],
@@ -708,7 +714,6 @@ fieldset {
   fieldset textarea {
     resize: vertical; }
   fieldset select {
-    line-height: 1.5rem;
     cursor: pointer; }
   fieldset.error .messages, fieldset.issue .messages {
     margin: 0;
@@ -720,17 +725,17 @@ fieldset {
       float: left;
       font-size: 1rem;
       margin-right: 0.5rem; }
-  fieldset.error label, fieldset.error select, fieldset.error textarea, fieldset.error input[type="date"], fieldset.error input[type="email"], fieldset.error input[type="month"], fieldset.error input[type="number"], fieldset.error input[type="password"], fieldset.error input[type="tel"], fieldset.error input[type="text"] {
+  fieldset.error label, fieldset.error select, fieldset.error textarea, fieldset.error input[type="date"], fieldset.error input[type="time"], fieldset.error input[type="email"], fieldset.error input[type="month"], fieldset.error input[type="number"], fieldset.error input[type="password"], fieldset.error input[type="tel"], fieldset.error input[type="text"] {
     color: #DD4B39;
     border-color: #FFCAB8; }
-  fieldset.error select:focus, fieldset.error textarea:focus, fieldset.error input[type="date"]:focus, fieldset.error input[type="email"]:focus, fieldset.error input[type="month"]:focus, fieldset.error input[type="number"]:focus, fieldset.error input[type="password"]:focus, fieldset.error input[type="tel"]:focus, fieldset.error input[type="text"]:focus {
+  fieldset.error select:focus, fieldset.error textarea:focus, fieldset.error input[type="date"]:focus, fieldset.error input[type="time"]:focus, fieldset.error input[type="email"]:focus, fieldset.error input[type="month"]:focus, fieldset.error input[type="number"]:focus, fieldset.error input[type="password"]:focus, fieldset.error input[type="tel"]:focus, fieldset.error input[type="text"]:focus {
     border-color: #DD4B39; }
   fieldset.error .messages li {
     color: #DD4B39; }
-  fieldset.issue label, fieldset.issue select, fieldset.issue textarea, fieldset.issue input[type="date"], fieldset.issue input[type="email"], fieldset.issue input[type="month"], fieldset.issue input[type="number"], fieldset.issue input[type="password"], fieldset.issue input[type="tel"], fieldset.issue input[type="text"] {
+  fieldset.issue label, fieldset.issue select, fieldset.issue textarea, fieldset.issue input[type="date"], fieldset.issue input[type="time"], fieldset.issue input[type="email"], fieldset.issue input[type="month"], fieldset.issue input[type="number"], fieldset.issue input[type="password"], fieldset.issue input[type="tel"], fieldset.issue input[type="text"] {
     color: #DD9331;
     border-color: #FFE07E; }
-  fieldset.issue select:focus, fieldset.issue textarea:focus, fieldset.issue input[type="date"]:focus, fieldset.issue input[type="email"]:focus, fieldset.issue input[type="month"]:focus, fieldset.issue input[type="number"]:focus, fieldset.issue input[type="password"]:focus, fieldset.issue input[type="tel"]:focus, fieldset.issue input[type="text"]:focus {
+  fieldset.issue select:focus, fieldset.issue textarea:focus, fieldset.issue input[type="date"]:focus, fieldset.issue input[type="time"]:focus, fieldset.issue input[type="email"]:focus, fieldset.issue input[type="month"]:focus, fieldset.issue input[type="number"]:focus, fieldset.issue input[type="password"]:focus, fieldset.issue input[type="tel"]:focus, fieldset.issue input[type="text"]:focus {
     border-color: #DD9331; }
   fieldset.issue .messages li {
     color: #DD9331; }
@@ -859,7 +864,7 @@ fieldset {
   background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <path fill="%23FFFFFF " d="M6.969,13.5c-0.269,0-0.532-0.09-0.745-0.259l-3.266-2.578c-0.522-0.412-0.611-1.168-0.199-1.69 c0.413-0.522,1.17-0.609,1.69-0.199l2.208,1.743l4.618-7.448c0.35-0.564,1.091-0.74,1.656-0.388c0.565,0.35,0.739,1.092,0.389,1.657 l-5.328,8.593c-0.181,0.291-0.477,0.491-0.814,0.551C7.108,13.494,7.038,13.5,6.969,13.5z"/></svg>');
   background-size: 100%; }
 
-/*! Samaritan.css v1.1.2-beta | MIT License */
+/*! Samaritan.css v1.1.3-beta | MIT License */
 /* Core Variables
   =========================================================================== */
 /* Shadow Extendables
@@ -911,7 +916,6 @@ hr {
 
 .app-menu {
   background-color: rgba(237, 237, 237, 0.97);
-  box-shadow: 0 2px 6px #D4D4D4;
   left: 0;
   top: 0;
   width: 100%;
@@ -919,7 +923,7 @@ hr {
   z-index: 10; }
   .app-menu .app-context {
     margin: auto;
-    padding: 1.3rem 1rem; }
+    padding: 1.9rem 1rem; }
     .app-menu .app-context .app-title {
       color: #222222;
       font-size: 1.563rem;
@@ -933,29 +937,34 @@ hr {
     .app-menu .app-navigation li {
       float: left;
       margin: 0 1rem;
-      padding: 0.7rem 0;
+      padding: 0.9rem 0;
+      padding-top: 0rem;
       line-height: 0.9rem;
+      margin-right: 1.3rem;
       color: rgba(34, 34, 34, 0.6);
       font-size: 1rem;
       transition: all ease-in-out 0.2s;
       border-bottom: 4px solid transparent; }
-      .app-menu .app-navigation li:hover {
+      .app-menu .app-navigation li a {
+        color: rgba(34, 34, 34, 0.6); }
+      .app-menu .app-navigation li:hover, .app-menu .app-navigation li a:hover {
         color: #222222; }
-      .app-menu .app-navigation li.active {
+      .app-menu .app-navigation li.active, .app-menu .app-navigation li a.active {
         color: #222222;
         border-bottom: 4px solid; }
   .app-menu.expanded {
-    height: 7.05rem; }
+    height: 7.8rem; }
   .app-menu.condensed, .app-menu {
-    height: 4.6rem; }
+    height: 5.95rem; }
   .app-menu.fixed {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     position: fixed; }
 
 .app-menu ~ .app-content {
-  padding-top: 4.6rem; }
+  padding-top: 5.95rem; }
 
 .app-menu.expanded ~ .app-content {
-  padding-top: 7.05rem; }
+  padding-top: 7.8rem; }
 
 /* Action Button Colors
   ================================================== */
