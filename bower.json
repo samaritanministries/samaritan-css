@@ -1,6 +1,6 @@
 {
   "name": "samaritan-css",
-  "version": "1.1.2-beta",
+  "version": "1.1.4-beta",
   "main": "sass/samaritan.scss",
 
   "homepage": "http://developers.samaritanministries.org/",
@@ -13,8 +13,8 @@
   },
 
   "dependencies": {
-    "dashing-core":   "~1.0.5",
-    "dashing-forms":  "~1.0.0",
-    "dashing-grid":   "~1.0.5"
+    "dashing-core":   "~1.0.6",
+    "dashing-forms":  "~1.0.2",
+    "dashing-grid":   "~1.0.6"
   }
 }

@@ -2,7 +2,7 @@ $menu-height-condensed: 4.6rem;
 $menu-height-expanded: 7.05rem;
 $menu-color: $gray-100 !default;
 
-@function set-auto-color($color) {
+@function auto-color($color) {
   @if (lightness($color) > 60) { @return $gray-900; }
   @else { @return $white; }
 }
@@ -11,28 +11,29 @@ $menu-color: $gray-100 !default;
   @extend .app-menu.condensed;
   background-color: rgba($menu-color, 0.97);
   box-shadow: 0 2px 6px $gray-200;
-  left: 0;
-  top: 0;
-  width: 100%;
+  height: auto !important;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
 
   .app-context {
     @extend %app-content-width;
     @extend %clearfix;
     margin: auto;
-    padding: 1.3rem 1rem;
+    padding: 1rem;
 
     .app-title {
-      color: set-auto-color($menu-color);
-      font-size: $font-size-large;
+      color: auto-color($menu-color);
+      font-size: $font-size-medium;
       font-weight: 600;
 
       a {
-        color: set-auto-color($menu-color);
+        color: auto-color($menu-color);
 
         &:hover {
-          color: rgba(set-auto-color($menu-color), .60);
+          color: rgba(auto-color($menu-color), .60);
         }
       }
     }
@@ -43,25 +44,31 @@ $menu-color: $gray-100 !default;
     @extend %app-content-width;
     @extend %clearfix;
     margin: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 1rem;
+    white-space: nowrap;
 
     li {
       @extend %action;
-      float: left;
-      margin: 0 1rem;
-      padding: 0.7rem 0;
-      line-height: 0.9rem;
-      color: rgba(set-auto-color($menu-color), .60);
+      border-bottom: 5px solid transparent;
+      color: rgba(auto-color($menu-color), .60);
+      display: inline-block;
+      float: none;
       font-size: 1rem;
-      transition: all ease-in-out 0.2s;
-      border-bottom: 4px solid transparent;
+      line-height: 0.9rem;
+      margin: 0;
+      margin-right: 1rem; // TODO review this with Chandler
+      padding: 0.7rem 0;
+      transition: color 0.2s ease-in-out;
 
       &:hover {
-        color: set-auto-color($menu-color);
+        color: auto-color($menu-color);
       }
 
       &.active {
-        color: set-auto-color($menu-color);
-        border-bottom: 4px solid;
+        color: auto-color($menu-color);
+        border-bottom: 5px solid;
       }
     }
   }
