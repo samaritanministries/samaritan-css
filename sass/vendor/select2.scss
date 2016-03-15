@@ -121,9 +121,6 @@ $border-color: #E0E0E0;
   float: right;
   height: 25px;
   margin-right: 0.4rem;
-  background: url('../bower_components/samaritan-css/images/samaritan-sprite.svg') no-repeat;
-  background-position: 0px -75px;
-  background-size: 1000%;
 }
 
 .select2-search {
@@ -177,11 +174,6 @@ $border-color: #E0E0E0;
     background: transparent;
     border-left: none;
     filter: none;
-}
-.select2-dropdown-open .select2-choice .select2-arrow b {
-    background: url('../bower_components/samaritan-css/images/samaritan-sprite.svg') no-repeat 0;
-    background-position: -80px -26px;
-    background-size: 400%;
 }
 
 .select2-hidden-accessible {
